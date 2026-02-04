@@ -1,0 +1,17 @@
+<offer id="3308" available="true">
+<currencyId>RUB</currencyId>
+<price>350</price>
+<name>Полоса 90 х 12 (ГОСТ 535-05)</name>
+<description><![CDATA[
+Полоса 90*12, цена указана за 1 м.<br/>
+Представляет собой сплошной металлопрофиль.<br/>
+Предназначен для изготовления различных металлоконструкций и инструментов.<br/>
+]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/08/Полоса.jpg</picture>
+<url>https://muraveynik.su/product/polosa-90-12/</url>
+<vendorCode>998</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>63</categoryId>
+</offer>

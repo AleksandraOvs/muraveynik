@@ -1,0 +1,12 @@
+<offer id="650" available="true"  >
+<name>Пруток 10 (длина 1 м)</name>
+<description><![CDATA[<p>Пруток d 10, длина 1 м. Пруток может использоваться в том числе для изготовления изгородей, силовых частей балконов; в строительстве необходим для армирования конструкций</p>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/08/Пруток.jpg</picture>
+<url>https://muraveynik.su/?post_type=product&amp;p=650</url>
+<price>80</price>
+<currencyId>RUR</currencyId>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>61</categoryId>
+</offer>

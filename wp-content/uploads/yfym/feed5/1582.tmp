@@ -1,0 +1,13 @@
+<offer id="1582" available="false"  >
+<name>Диск отрезной 300*3,2*22 BOSCH</name>
+<description><![CDATA[Диск для резки металла. Используется для установки на МШУ<br/>
+наружный диаметр  300 мм, посадочный диаметр 22 мм, толщина 3.2 мм.<br/>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/12/Бош.jpg</picture>
+<url>https://muraveynik.su/?post_type=product&amp;p=1582</url>
+<price>170</price>
+<currencyId>RUR</currencyId>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>122</categoryId>
+</offer>

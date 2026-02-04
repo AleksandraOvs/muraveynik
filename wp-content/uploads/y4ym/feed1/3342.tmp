@@ -1,0 +1,17 @@
+<offer id="3342" available="true">
+<currencyId>RUB</currencyId>
+<price>2733</price>
+<name>Уголок 140 х 140 х 10,0</name>
+<description><![CDATA[
+Уголок металлический, размер 140*140*10,0<br/>
+Применяется для укрепления каркасов и для других целей в строительстве.<br/>
+Цена указана за 1 м.<br/>
+]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/08/Уголок-металлический-1.jpg</picture>
+<url>https://muraveynik.su/product/ugolok-140-140-10/</url>
+<vendorCode>6662</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>91</categoryId>
+</offer>

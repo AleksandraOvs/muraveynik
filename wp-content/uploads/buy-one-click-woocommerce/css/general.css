@@ -1,0 +1,289 @@
+#buyoneclick_form_order {
+    font-size: 16px;
+}
+#buyoneclick_form_order .form-message-result {
+    font-size: 13px;
+    color: grey;
+}
+
+form#buyoneclick_form_order h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+#buyoneclick_form_order form {
+    margin-bottom: 0;
+}
+#buyoneclick_form_order .table-wrap {
+    text-align: center;
+    display: inline-block;
+    background-color: #ededed;
+    padding: 10px;
+    color: #1e1e1e;
+    width: 100%;
+}
+
+#buyoneclick_form_order .table-wrap table {
+    border: none;
+    width: 100%;
+    margin:0;
+    padding:0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#buyoneclick_form_order .table-wrap table:not(:last-child){
+    border-bottom: 1px solid #ccc;
+}
+
+
+#buyoneclick_form_order .table-wrap table tr {
+    vertical-align: middle;
+    /* border: 1px solid #ddd; */
+    padding: 5px;
+}
+
+#buyoneclick_form_order .table-wrap table th, #buyoneclick_form_order .table-wrap table td {
+    font-size: 16px;
+    padding: 5px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+}
+
+#buyoneclick_form_order .table-wrap table td:first-child{
+    text-align: left;
+}
+
+span.description .amount bdi {
+    font-size: 2.8rem;
+}
+
+#buyoneclick_form_order .table-wrap table th {
+    color: #fff;
+    background-color: #444;
+    text-transform: uppercase;
+
+}
+
+#formOrderOneClick>.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    cursor: default;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    visibility: hidden;
+    z-index: 9999989;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+}
+#formOrderOneClick>.popup {
+    background-color: #fff;
+    border: 3px solid #fff;
+    display: block;
+    left: 50%;
+    opacity: 0;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    min-width: 320px;
+    height: auto;
+    position: fixed;
+    text-align: justify;
+    top: 40%;
+    visibility: hidden;
+    z-index: 999999997;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: opacity .5s, top .5s;
+    -moz-transition: opacity .5s, top .5s;
+    -ms-transition: opacity .5s, top .5s;
+    -o-transition: opacity .5s, top .5s;
+    transition: opacity .5s, top .5s;
+    border-radius: 4px;
+}
+
+#formOrderOneClick .popup .close_order {
+    position:relative;
+    display: block;
+    /* padding: 7px; */
+    background: #23C229;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    /* padding: 2px; */
+    top: -6px;
+    font-size: 0;
+    line-height: 1;
+    right: -6px;
+    cursor: pointer;
+    color: #1e1e1e;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -o-border-radius: 20%;
+    -ms-border-radius: 20%;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.close_order:after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    display: block;
+    background: #fff;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 5px;
+    top: 13px;
+}
+
+.close_order:before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    display: block;
+    background: #fff;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 5px;
+    top: 13px;
+}
+
+#formOrderOneClick input[type="email"], #buyoneclick_form_order input[type="tel"], #buyoneclick_form_order input[type="text"] {
+    padding: 0px 7px;
+    margin: 0;
+    border:none;
+    border-bottom: 1px solid #1e1e1e;
+    height: 2.3em;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    color: #1e1e1e;
+}
+
+#formOrderOneClick .file-load-block .input-file + .js-labelFile .icon:before {
+    content: none !important;
+}
+
+#formOrderOneClick textarea{
+    resize: none;
+    font-family: 'arial', sans-serif;
+    padding: 6px;
+    width: 100%;
+    height: 80px;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background-color: #fff;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#formOrderOneClick input[type="checkbox"] {
+    float: left;
+}
+#formOrderOneClick .popup #buyoneclick_form_order {
+    position: relative;
+    border-radius: 12px;
+    background: none;
+}
+
+#formOrderOneClick .button:hover {
+
+    text-decoration: none;
+}
+#formOrderOneClick .button:active, #buyoneclick_form_order input[type="submit"].button:disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+#formOrderOneClick .phoneFormat {
+    line-height: 12px;
+    font-size: 12px;
+    color: #cacaca;
+    position: relative;
+    z-index: 20;
+    padding: 0;
+    margin: 2px;
+}
+
+#formOrderOneClick th,td {
+    font-weight: normal;
+}
+
+#buyoneclick_form_order .file-load-block .form-group .btn{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid #F99A30;
+    color:#fff;
+    background: #F99A30;
+}
+#formOrderOneClick .button{
+    display: block;
+    width: 100%;
+    border: 1px solid #23C229;
+    background: #23C229;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    margin-top:15px;
+    padding: 10px 40px;
+    transition: all .3s linear;
+}
+#formOrderOneClick [name="quantity_product"] {
+    position: relative;
+    height: 50%;
+    width: 75px;
+
+}
+@media screen and (max-width: 600px) {
+    #formOrderOneClick > .popup {
+        min-width: 90%;
+    }
+
+    #buyoneclick_form_order .table-wrap table {
+        border: 0;
+    }
+    #buyoneclick_form_order .table-wrap table thead {
+        display: none;
+    }
+    #buyoneclick_form_order .table-wrap table tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #ddd;
+    }
+    #buyoneclick_form_order .table-wrap table td {
+        display: block;
+        text-align: right;
+        font-size: 13px;
+        border-bottom: 1px dotted #ccc;
+        border-right: 1px solid transparent;
+    }
+    #buyoneclick_form_order .table-wrap table td:last-child {
+        border-bottom: 0;
+    }
+    #buyoneclick_form_order .table-wrap  table td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}

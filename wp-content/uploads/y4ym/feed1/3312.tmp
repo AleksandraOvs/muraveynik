@@ -1,0 +1,17 @@
+<offer id="3312" available="true">
+<currencyId>RUB</currencyId>
+<price>2220</price>
+<name>Профильная труба 60 х 40 х 4,0 (ГОСТ)</name>
+<description><![CDATA[
+Труба профильная размер 60*40*4,0<br/>
+Длина 6 м.<br/>
+Используется профильная труба в строительстве.<br/>
+]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/08/Профиль-прямоугольный.jpg</picture>
+<url>https://muraveynik.su/product/profilnaya-truba-60-40-4/</url>
+<vendorCode>6650</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>182</categoryId>
+</offer>

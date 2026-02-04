@@ -1,0 +1,18 @@
+<offer id="3341" available="true">
+<currencyId>RUB</currencyId>
+<price>546</price>
+<name>Уголок 90 х 90 х 6,0 (длина - 6 м)</name>
+<description><![CDATA[
+Уголок металлический, размер 90*90*6,0<br/>
+Длина 6 м.<br/>
+Применяется для укрепления каркасов и для других целей в строительстве.<br/>
+Цена указана за 1 м.<br/>
+]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/08/Уголок-металлический-1.jpg</picture>
+<url>https://muraveynik.su/product/ugolok-90-90-6/</url>
+<vendorCode>6661</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>91</categoryId>
+</offer>

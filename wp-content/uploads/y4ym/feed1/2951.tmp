@@ -1,0 +1,16 @@
+<offer id="2951" available="true">
+<currencyId>RUB</currencyId>
+<price>8100</price>
+<name>Комплект для откатных ворот КДВ до 450 кг (6 м)</name>
+<description><![CDATA[<p>Комплект для установки откатных ворот.<br />
+Максимальный вес ворот — 450 кг<br />
+Длина профиля 6 м.<br />
+Оцинкованная балка.</p>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2023/07/vorota.jpg</picture>
+<url>https://muraveynik.su/product/komplekt-dlya-otkatnyh-vorot-kdv-450-kg-6-m/</url>
+<vendorCode>5566</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>201</categoryId>
+</offer>

@@ -1,0 +1,15 @@
+<offer id="2911" available="true">
+<currencyId>RUB</currencyId>
+<price>1990</price>
+<name>Лист оцинкованный 0,7 (цинк 140) 1250х2500 (ГОСТ 14918-2020)</name>
+<description><![CDATA[<p>Лист изготовлен из оцинкованной стали холоднокатанным способом.<br />
+Толщина — 0,7 мм<br />
+Размеры — 1250х2500 мм</p>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2023/12/list-otcink.jpg</picture>
+<url>https://muraveynik.su/product/list-otsinkovannyj-0-7-mm/</url>
+<vendorCode>9258</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>209</categoryId>
+</offer>

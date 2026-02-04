@@ -1,0 +1,18 @@
+<offer id="2598" available="true">
+<currencyId>RUB</currencyId>
+<price>23</price>
+<name>Арматура 8 (ГОСТ 34028-2016)</name>
+<description><![CDATA[<p>Арматура Ø8 мм — оптимальное решение для частных строек.<br />
+Используется для укрепления фундаментов, стен и небольших несущих конструкций.<br />
+Проста в установке и подходит для различных дачных и ремонтных работ.<br />
+Соответствует стандартам ГОСТ.<br />
+Возможна доставка по области или самовывоз со склада.<br />
+Цена указана за 1 м.</p>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/08/Арматура-1.jpg</picture>
+<url>https://muraveynik.su/product/armatura-8-mm/</url>
+<vendorCode>7125</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>97</categoryId>
+</offer>

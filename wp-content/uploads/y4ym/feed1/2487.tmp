@@ -1,0 +1,23 @@
+<offer id="2487" available="true">
+<currencyId>RUB</currencyId>
+<price>4950</price>
+<name>Сетка сварная ОЦ 50х50(100)х1,6мм 1,8х25м (Волна)</name>
+<description><![CDATA[
+
+
+<p>Сетка сварная оцинкованная в рулонах (Волна)<br />
+Размер ячейки — 50х50<br />
+Диаметр проволоки 1,6 мм<br />
+Высота рулона 1,8м<br />
+В рулоне 25 м</p>
+
+
+]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2023/04/setka-svarnaya-otsink-volna.jpg</picture>
+<url>https://muraveynik.su/product/setka-svarnaya-svarnaya-50-50-1-5-25-m-volna-2/</url>
+<vendorCode>4694</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>200</categoryId>
+</offer>

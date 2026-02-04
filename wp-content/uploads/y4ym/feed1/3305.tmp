@@ -1,0 +1,18 @@
+<offer id="3305" available="true">
+<currencyId>RUB</currencyId>
+<price>206</price>
+<name>Полоса 16 х 4 (длина - 6 м) (ГОСТ 535-05)</name>
+<description><![CDATA[
+Полоса 16*4, цена указана за 1 шт.<br/>
+Длина 6 м.<br/>
+Представляет собой сплошной металлопрофиль.<br/>
+Предназначен для изготовления различных металлоконструкций и инструментов.<br/>
+]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/08/Полоса.jpg</picture>
+<url>https://muraveynik.su/product/polosa-16-4-dlina-6-m/</url>
+<vendorCode>7045</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>63</categoryId>
+</offer>

@@ -1,0 +1,38 @@
+# BEGIN Imagify: webp file type
+<IfModule mod_mime.c>
+	AddType image/webp .webp
+</IfModule>
+# END Imagify: webp file type
+
+SetEnvIfNoCase User-Agent "Amazonbot" bad_bot
+SetEnvIfNoCase User-Agent "Amazonbot/0.1" bad_bot
+
+<Limit GET POST HEAD> 
+Order Allow,Deny 
+Allow from all
+Deny from env=bad_bot
+</Limit>
+
+#This Apache config file was created by Duplicator Installer on 2020-10-23 20:28:54.
+#The original can be found in archived file with the name .htaccess__[HASH]
+
+# BEGIN WordPress
+# Директивы (строки) между `BEGIN WordPress` и `END WordPress`
+# созданы автоматически и подлежат изменению только через фильтры WordPress.
+# Сделанные вручную изменения между этими маркерами будут перезаписаны.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+<Files wp-login.php>
+order allow,deny
+Deny from all
+</Files>

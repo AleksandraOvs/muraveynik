@@ -1,0 +1,17 @@
+<offer id="592" available="true">
+<currencyId>RUB</currencyId>
+<price>2380</price>
+<name>Лист г/к 2,0 х 1000 х 2100 (ГОСТ 7566-2018)</name>
+<description><![CDATA[
+Лист стальной горячекатаный , размер 2,0*1000*2100 .<br/>
+Лист стальной горячекатаный применяется в различных сферах: в строительстве, в машино-, автомобиле-, приборостроении, производстве инструмента, в сельском хозяйстве, пищевой, нефтегазовой, химической промышленности.<br/>
+Производитель — г. Магнитогорск<br/>
+]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/08/Лист-горячекатанный-1.jpg</picture>
+<url>https://muraveynik.su/product/list-g-k-20-h-1000-h-2100/</url>
+<vendorCode>2178</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>93</categoryId>
+</offer>

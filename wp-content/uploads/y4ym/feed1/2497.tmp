@@ -1,0 +1,22 @@
+<offer id="2497" available="true">
+<currencyId>RUB</currencyId>
+<price>272</price>
+<name>Сетка сварная 65х65х3,5мм 0,5х2м</name>
+<description><![CDATA[
+
+
+<p>Сетка сварная из проволоки ВР-1 в картах</p>
+<p>Размер ячейки 65х65<br />
+Диаметр проволоки 3,5 мм<br />
+Размеры 0,5мх2м</p>
+
+
+]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2023/05/setka-svarnaya-55-55-2-m.png</picture>
+<url>https://muraveynik.su/product/setka-svarnaya-65-65-3-5-2-m/</url>
+<vendorCode>5506</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>200</categoryId>
+</offer>

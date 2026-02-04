@@ -1,0 +1,469 @@
+# Translation of Plugins - WCAPF &#8211; WooCommerce Ajax Product Filter - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - WCAPF &#8211; WooCommerce Ajax Product Filter - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-05-03 10:57:15+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - WCAPF &#8211; WooCommerce Ajax Product Filter - Stable (latest release)\n"
+
+#: includes/class-wcapf-form.php:90
+msgid "Edit form"
+msgstr "Редактировать форму"
+
+#: includes/class-wcapf-helper.php:864
+msgid "Reset"
+msgstr "Сбрасить"
+
+#: includes/class-wcapf-admin.php:158 build/form.js:1 build/list-forms.js:1
+#: build/seo-rules.js:1 build/settings.js:1
+msgid "Forms"
+msgstr "Формы"
+
+#: includes/class-wcapf-admin.php:58 includes/class-wcapf-admin.php:115
+#: build/form.js:1 build/list-forms.js:1 build/seo-rules.js:1
+#: build/settings.js:1
+msgid "Settings"
+msgstr "Настройки"
+
+#: includes/class-wcapf-admin.php:48
+msgid "Add Filters"
+msgstr "Добавить фильтры"
+
+#: includes/class-wcapf-helper.php:815 includes/class-wcapf-helper.php:853
+#: build/form.js:1
+msgid "Filters"
+msgstr "Фильтры"
+
+#: includes/class-wcapf-api-utils.php:195
+#: includes/class-wcapf-form-filters-utils.php:150
+#: includes/shortcodes/class-wcapf-active-filters-shortcode.php:26
+msgid "Active Filters"
+msgstr "Активные фильтры"
+
+#: includes/class-wcapf-post-type.php:54
+msgctxt "Post type general name"
+msgid "Filters"
+msgstr "Фильтры"
+
+#: includes/class-wcapf-api-utils.php:349 build/form.js:1 build/list-forms.js:1
+#: build/seo-rules.js:1
+msgid "Title"
+msgstr "Заголовок"
+
+#: includes/class-wcapf-api-utils.php:174
+msgid "Keyword"
+msgstr "Ключевое слово"
+
+#: includes/class-wcapf-helper.php:805
+msgid "Keyword:"
+msgstr "Ключевое слово:"
+
+#: includes/class-wcapf-api-utils.php:150
+#: includes/class-wcapf-api-utils.php:389
+#: includes/class-wcapf-default-data.php:127 build/form.js:1
+msgid "Price"
+msgstr "Цена"
+
+#: includes/class-wcapf-api-utils.php:200
+msgid "Reset Button"
+msgstr "Кнопка сброса"
+
+#: includes/widgets/class-wcapf-filter-widget.php:60
+msgid "No settings are required! The form will be displayed according to the <b>Available on</b> setting."
+msgstr "Никаких настроек не требуется! Форма будет отображаться в соответствии с настройкой <b>Доступно на</b>."
+
+#. Description of the plugin
+#: wc-ajax-product-filter.php
+msgid "A plugin to filter WooCommerce products with AJAX request."
+msgstr "Плагин фильтрации продуктов WooCommerce с помощью AJAX."
+
+#: includes/class-wcapf-admin.php:75 build/form.js:1 build/list-forms.js:1
+#: build/seo-rules.js:1 build/settings.js:1
+msgid "Upgrade to Pro"
+msgstr "Обновиться до Pro"
+
+#: includes/shortcodes/class-wcapf-filter-form-shortcode.php:96
+msgid "The free version of the plugin does not support filtering products on singular pages. Upgrade to the <a href=\"%s\" target=\"_blank\">Pro version</a> to unlock this feature."
+msgstr "Бесплатная версия плагина не поддерживает фильтрацию товаров на отдельных страницах. Обновитесь до <a href=\"%s\" target=\"_blank\">Pro версии</a>, чтобы разблокировать эту функцию."
+
+#: includes/shortcodes/class-wcapf-filter-form-shortcode.php:78
+msgid "The form has already been displayed and cannot be shown again. Upgrade to the <a href=\"%s\" target=\"_blank\">Pro version</a> for the ability to use multiple forms on a page."
+msgstr "Форма уже отображена и не может быть показана снова. Обновитесь до <a href=\"%s\" target=\"_blank\">Pro версии</a>, чтобы получить возможность использовать несколько форм на странице."
+
+#: includes/class-wcapf-form.php:434
+msgid "Search products"
+msgstr "Поиск по товарам"
+
+#: includes/class-wcapf-walker.php:973 build/form.js:1
+msgid "Search"
+msgstr "Найти"
+
+#: includes/class-wcapf-helper.php:777
+msgid "No results for:"
+msgstr "Ничего не найдено по запросу:"
+
+#: includes/class-wcapf-helper.php:787
+msgid "N/A"
+msgstr "Н/Д"
+
+#: includes/class-wcapf-walker.php:1008
+msgid "+ Show more"
+msgstr "+ Развернуть"
+
+#: includes/class-wcapf-walker.php:1013
+msgid "− Show less"
+msgstr "- Свернуть"
+
+#: includes/class-wcapf-helper.php:859
+msgid "Clear All"
+msgstr "Очистить всё"
+
+#: includes/class-wcapf-helper.php:796
+msgid "Sort by:"
+msgstr "Сортировка по:"
+
+#: includes/class-wcapf-field-instance.php:276 build/form.js:1
+msgid "Default"
+msgstr "По умолчанию"
+
+#: includes/class-wcapf-default-data.php:224 build/form.js:1
+msgid "Status"
+msgstr "Статус"
+
+#: includes/class-wcapf-default-data.php:214
+msgid "Tag"
+msgstr "Метка"
+
+#: includes/class-wcapf-default-data.php:163
+msgid "Any"
+msgstr "Любой"
+
+#: includes/migration/class-wcapf-v4-migration.php:407
+msgid "Default form"
+msgstr "Форма по умолчанию"
+
+#: includes/class-wcapf-post-type.php:55
+msgctxt "Post type singular name"
+msgid "Filter"
+msgstr "Фильтр"
+
+#: includes/class-wcapf-api-utils.php:353
+msgid "Name (Post Slug)"
+msgstr "Название (Ярлык записи)"
+
+#: includes/class-wcapf-walker.php:1020
+msgid "Show/hide all options"
+msgstr "Показать/скрыть все параметры"
+
+#: includes/class-wcapf-frontend-scripts.php:216
+msgid "No options to choose"
+msgstr "Нет параметров для выбора"
+
+#: includes/class-wcapf-field-instance.php:282
+msgid "All Items"
+msgstr "Все варианты"
+
+#: includes/class-wcapf-api-utils.php:155 build/form.js:1
+msgid "Rating"
+msgstr "Рейтинг"
+
+#: includes/class-wcapf-api-utils.php:385
+msgid "Average Rating"
+msgstr "Средний рейтинг"
+
+#: includes/hooks/class-wcapf-rating-filter.php:150
+msgid "%d star"
+msgid_plural "%d stars"
+msgstr[0] "%d звезда"
+msgstr[1] "%d звезды"
+msgstr[2] "%d звезд"
+
+#: includes/class-wcapf-api-utils.php:160
+msgid "Product Status"
+msgstr "Статус товара"
+
+#: includes/class-wcapf-api-utils.php:165
+msgid "Post Author"
+msgstr "Автор записи"
+
+#: includes/class-wcapf-api-utils.php:170
+msgid "Post Meta"
+msgstr "Метаданные записи"
+
+#: includes/class-wcapf-api-utils.php:393
+msgid "Meta Value"
+msgstr "Мета-значение"
+
+#: includes/class-wcapf-api-utils.php:357
+#: includes/class-wcapf-api-utils.php:421 build/form.js:1
+msgid "Date"
+msgstr "Дата"
+
+#: includes/class-wcapf-form-filters-utils.php:355
+msgid "Please make it unique by adding an underscore."
+msgstr "Пожалуйста, сделайте его уникальным, добавив подчеркивание."
+
+#: includes/hooks/class-wcapf-api.php:786
+msgid "There was a problem deleting the form, please try again."
+msgstr "Не удалось удалить форму, пожалуйста, попробуйте еще раз."
+
+#: includes/hooks/class-wcapf-api.php:812
+msgid "There was a problem deleting the filter, please try again."
+msgstr "Не удалось удалить фильтр, пожалуйста, попробуйте еще раз."
+
+#: includes/class-wcapf-form.php:78
+msgid "The form is empty. Please add some filters by editing the form <a href=\"%s\">here</a>."
+msgstr "Форма пуста. Добавьте несколько фильтров, отредактировав форму <a href=\"%s\">здесь</a>."
+
+#: includes/class-wcapf-form-filters-utils.php:322
+msgid "This is a reserved key. Please use a different string."
+msgstr "Это зарезервированный ключ. Пожалуйста, используйте другую строку."
+
+#: includes/class-wcapf-api-utils.php:179
+msgid "Sort By"
+msgstr "Сортировать по"
+
+#: includes/class-wcapf-api-utils.php:341
+msgid "Post ID"
+msgstr "ID записи"
+
+#: includes/class-wcapf-api-utils.php:345 build/form.js:1
+msgid "Author"
+msgstr "Автор"
+
+#: includes/class-wcapf-api-utils.php:361
+msgid "Modified"
+msgstr "Дата последнего изменения"
+
+#: includes/class-wcapf-api-utils.php:365
+msgid "Parent ID"
+msgstr "ID родителя"
+
+#: includes/class-wcapf-api-utils.php:369
+msgid "Random Order"
+msgstr "Случайный порядок"
+
+#: includes/class-wcapf-api-utils.php:373
+msgid "Review Count"
+msgstr "Количество отзывов"
+
+#: includes/class-wcapf-api-utils.php:377 build/form.js:1
+msgid "Menu Order"
+msgstr "Порядок в меню"
+
+#: templates/menu-item-count.php:16
+msgid "%d product"
+msgid_plural "%d products"
+msgstr[0] "%d товар"
+msgstr[1] "%d товара"
+msgstr[2] "%d товаров"
+
+#: includes/class-wcapf-api-utils.php:381
+msgid "Total Sales"
+msgstr "Всего продаж"
+
+#: includes/class-wcapf-api-utils.php:426
+msgid "DateTime"
+msgstr "Дата и время"
+
+#: includes/class-wcapf-api-utils.php:416
+msgid "Numeric"
+msgstr "Числовой"
+
+#: includes/class-wcapf-api-utils.php:431
+msgid "Decimal"
+msgstr "Десятичный"
+
+#: includes/class-wcapf-api-utils.php:411
+msgid "Alphabetic"
+msgstr "Алфавитный"
+
+#: includes/class-wcapf-api-utils.php:185
+msgid "Per Page"
+msgstr "На страницу"
+
+#: includes/class-wcapf-api-utils.php:145
+msgid "Taxonomy"
+msgstr "Таксономия"
+
+#: includes/class-wcapf-form-filters-utils.php:350
+msgid "Taxonomy name can't be used as a filter key, it'll create conflict."
+msgstr "Имя таксономии нельзя использовать в качестве ключа фильтра: это создаст конфликт."
+
+#: includes/shortcodes/class-wcapf-filter-form-shortcode.php:61
+msgid "No forms found. <a href=\"%s\">Create a form here</a>."
+msgstr "Формы не найдены. <a href=\"%s\">Создать форму</a>."
+
+#: includes/class-wcapf-api-utils.php:205
+msgid "Results Count"
+msgstr "Счетчик результатов"
+
+#: includes/widgets/class-wcapf-filter-widget.php:23
+msgid "Display a form to filter products in your store."
+msgstr "Отобразите форму для фильтрации товаров в вашем магазине."
+
+#: includes/hooks/class-wcapf-api.php:816
+msgid "Invalid filter id"
+msgstr "Неверный идентификатор фильтра"
+
+#: includes/hooks/class-wcapf-api.php:809
+msgid "Filter deleted successfully"
+msgstr "Фильтр успешно удален"
+
+#: includes/hooks/class-wcapf-api.php:783
+msgid "Form deleted successfully"
+msgstr "Форма успешно удалена"
+
+#: includes/hooks/class-wcapf-api.php:141
+#: includes/hooks/class-wcapf-api.php:388
+#: includes/hooks/class-wcapf-api.php:790
+msgid "Invalid form id"
+msgstr "Неверный идентификатор формы"
+
+#: includes/hooks/class-wcapf-api.php:81
+msgid "Sample form"
+msgstr "Образец формы"
+
+#: includes/class-wcapf-walker.php:872
+msgid "Expand/Collapse %s"
+msgstr "Развернуть/Свернуть %s"
+
+#: includes/class-wcapf-post-type.php:67
+msgctxt "Post type singular name"
+msgid "Filter Form"
+msgstr "Форма фильтра"
+
+#: includes/class-wcapf-post-type.php:66
+msgctxt "Post type general name"
+msgid "Filter Forms"
+msgstr "Формы фильтров"
+
+#: includes/class-wcapf-helper.php:884
+msgid "Apply"
+msgstr "Применить"
+
+#: includes/class-wcapf-helper.php:874
+msgid "Submit"
+msgstr "Отправить"
+
+#: includes/class-wcapf-admin.php:114
+msgid "WCAPF - WooCommerce Ajax Product Filter - Settings"
+msgstr "WCAPF — WooCommerce Ajax Product Filter — Настройки"
+
+#. Author URI of the plugin
+#: wc-ajax-product-filter.php
+msgid "https://wptools.io?utm_source=plugins+listing&utm_medium=wcapf+free&utm_campaign=Business+Website"
+msgstr "https://wptools.io?utm_source=plugins+listing&utm_medium=wcapf+free&utm_campaign=Business+Website"
+
+#. Author of the plugin
+#: wc-ajax-product-filter.php
+msgid "wptools.io"
+msgstr "wptools.io"
+
+#. Plugin URI of the plugin
+#: wc-ajax-product-filter.php
+msgid "https://wptools.io/wc-ajax-product-filter/?utm_source=plugins+listing&utm_medium=wcapf+free&utm_campaign=WCAPF+Pro+Details"
+msgstr "https://wptools.io/wc-ajax-product-filter/?utm_source=plugins+listing&utm_medium=wcapf+free&utm_campaign=WCAPF+Pro+Details"
+
+#. Plugin Name of the plugin
+#: wc-ajax-product-filter.php
+msgid "WCAPF - WooCommerce Ajax Product Filter"
+msgstr "WCAPF - WooCommerce Ajax Product Filter"
+
+#: wc-ajax-product-filter.php:122
+msgid "WCAPF - WooCommerce Ajax Product Filter requires WooCommerce. The plugin is currently NOT RUNNING."
+msgstr "WCAPF - WooCommerce Ajax Product Filter требуется WooCommerce. В настоящее время плагин НЕ РАБОТАЕТ."
+
+#: includes/class-wcapf-helper.php:1112
+msgid "WCAPF - WooCommerce Ajax Product Filter version %s requires WCAPF - WooCommerce Ajax Product Filter Pro version %s or higher, but you are using %s. The Pro version is currently NOT RUNNING. <a href=\"%s\" target=\"_blank\">Please proceed with the update</a>."
+msgstr "Для WCAPF - WooCommerce Ajax Product Filter версии %s требуется WCAPF - WooCommerce Ajax Product Filter Pro версии %s или выше, но вы используете %s. Версия Pro в настоящее время НЕ РАБОТАЕТ. <a href=\"%s\" target=\"_blank\">Пожалуйста, продолжите обновление</a>."
+
+#: includes/class-wcapf-helper.php:196
+msgid "Last 90 days"
+msgstr "Последние 90 дней"
+
+#: includes/class-wcapf-helper.php:195
+msgid "Last 30 days"
+msgstr "Последние 30 дней"
+
+#: includes/class-wcapf-helper.php:194
+msgid "Last 14 days"
+msgstr "Последние 14 дней"
+
+#: includes/class-wcapf-helper.php:193
+msgid "Last month"
+msgstr "Последний месяц"
+
+#: includes/class-wcapf-helper.php:192
+msgid "This month"
+msgstr "Этот месяц"
+
+#: includes/class-wcapf-helper.php:191
+msgid "Last week"
+msgstr "Последняя неделя"
+
+#: includes/class-wcapf-helper.php:190
+msgid "This week"
+msgstr "Текущая неделя"
+
+#: includes/class-wcapf-helper.php:189
+msgid "Yesterday"
+msgstr "Вчера"
+
+#: includes/class-wcapf-helper.php:188
+msgid "Today"
+msgstr "Cегодня"
+
+#: includes/class-wcapf-form-filters-utils.php:345
+msgid "Post type name can't be used as a filter key, it'll create conflict."
+msgstr "Имя типа записи нельзя использовать в качестве ключа фильтра, это приведет к конфликту."
+
+#: includes/class-wcapf-default-data.php:117
+msgid "Category"
+msgstr "Категория"
+
+#: includes/class-wcapf-api-utils.php:309
+#: includes/class-wcapf-default-data.php:234 build/form.js:1
+msgid "On Sale"
+msgstr "Со скидкой"
+
+#: includes/class-wcapf-helper.php:197
+msgid "This year"
+msgstr "Этот год"
+
+#: includes/class-wcapf-helper.php:198
+msgid "Last year"
+msgstr "Последний год"
+
+#: wc-ajax-product-filter.php:175
+msgid "%sWCAPF - WooCommerce Ajax Product Filter can not be activated. %s It requires PHP version %s or higher, but PHP version %s is used on the site. Please upgrade the PHP version first ✌️ %s Back %s"
+msgstr "%sWCAPF - WooCommerce Ajax Product Filter невозможно активировать. %s Требуется %s версия PHP или выше, на сайте же используется %s версия PHP. Пожалуйста, сначала обновите версию PHP ✌️ %s Назад %s"
+
+#: wc-ajax-product-filter.php:169
+msgid "WCAPF - WooCommerce Ajax Product Filter requires PHP version %s or higher, but PHP version %s is used on the site. The plugin is currently NOT RUNNING."
+msgstr "WCAPF - WooCommerce Ajax Product Filter требуется %s версия PHP или выше, на сайте же используется %s версия PHP. Плагин в настоящее время НЕ РАБОТАЕТ."
+
+#: wc-ajax-product-filter.php:157
+msgid "%sWCAPF - WooCommerce Ajax Product Filter can not be activated. %s It requires WordPress version %s or higher, but WordPress version %s is used on the site. Please upgrade the WordPress version first ✌️ %s Back %s"
+msgstr "%sWCAPF - WooCommerce Ajax Product Filter невозможно активировать. %s Требуется %s версия WordPress или выше, на сайте же используется %s версия WordPress. Пожалуйста, сначала обновите версию WordPress ✌️ %s Назад %s"
+
+#: wc-ajax-product-filter.php:151
+msgid "WCAPF - WooCommerce Ajax Product Filter requires WordPress version %s or higher, but WordPress version %s is used on the site. The plugin is currently NOT RUNNING."
+msgstr "WCAPF - WooCommerce Ajax Product Filter требуется %s версия WordPress или выше, на сайте же используется %s версия WordPress. Плагин в настоящее время НЕ РАБОТАЕТ."
+
+#: wc-ajax-product-filter.php:139
+msgid "%sWCAPF - WooCommerce Ajax Product Filter can not be activated. %s It requires WooCommerce version %s or higher, but WooCommerce version %s is used on the site. Please upgrade the WooCommerce version first ✌️ %s Back %s"
+msgstr "%sWCAPF - WooCommerce Ajax Product Filter невозможно активировать. %s Требуется %s версия WooCommerce или выше, на сайте же используется %s версия WooCommerce. Пожалуйста, сначала обновите версию WooCommerce ✌️ %s Назад %s"
+
+#: wc-ajax-product-filter.php:133
+msgid "WCAPF - WooCommerce Ajax Product Filter requires WooCommerce version %s or higher, but WooCommerce version %s is used on the site. The plugin is currently NOT RUNNING."
+msgstr "WCAPF - WooCommerce Ajax Product Filter требуется %s версия WooCommerce или выше, на сайте же используется %s версия WooCommerce. Плагин в настоящее время НЕ РАБОТАЕТ."
+
+#: wc-ajax-product-filter.php:125
+msgid "%sWCAPF - WooCommerce Ajax Product Filter can not be activated. %s It requires WooCommerce plugin to be activated. Please activate the WooCommerce plugin first ✌️ %s Back %s"
+msgstr "%sWCAPF - WooCommerce Ajax Product Filter невозможно активировать. %s Для активации требуется плагин WooCommerce. Пожалуйста, сначала активируйте плагин WooCommerce ✌️ %s Назад %s"

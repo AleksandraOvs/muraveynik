@@ -1,0 +1,13 @@
+<offer id="716" available="true"  >
+<name>Антифриз "Lukoil" G11 зеленый</name>
+<description><![CDATA[<p>Антифриз продается в розлив в вашу тару или в нашу тару по 5 л (тара выдается бесплатно)</p>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/08/Антифриз-зеленый.jpg</picture>
+<url>https://muraveynik.su/?post_type=product&amp;p=716</url>
+<price>100</price>
+<currencyId>RUR</currencyId>
+<vendorCode>10038</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>115</categoryId>
+</offer>

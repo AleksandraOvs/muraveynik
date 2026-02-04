@@ -1,0 +1,17 @@
+<offer id="3343" available="true">
+<currencyId>RUB</currencyId>
+<price>2468</price>
+<name>Уголок 160 х 100 х 10,0</name>
+<description><![CDATA[
+Уголок металлический, размер 160*100*10,0<br/>
+Применяется для укрепления каркасов и для других целей в строительстве.<br/>
+Цена указана за 1 м.<br/>
+]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/08/Уголок-металлический-1.jpg</picture>
+<url>https://muraveynik.su/product/ugolok-160-100-10/</url>
+<vendorCode>8516</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>91</categoryId>
+</offer>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2026-02-03T14:42:54+03:00">
+<shop>
+<name>Муравейник</name>
+<company>ИП Егоров Эдуард Александрович</company>
+<url>https://muraveynik.su/</url>
+<platform>WordPress - YML for Yandex Market</platform>
+<version>6.9</version>
+<currencies>
+<currency id="RUB" rate="1"/>
+</currencies>
+<categories>
+<category id="187">Винтовые сваи</category>
+<category id="212" parentId="53">Вязальная проволока</category>
+<category id="218" parentId="89">Заглушки пластиковые</category>
+<category id="216" parentId="92">Лист алюминиевый</category>
+<category id="209" parentId="92">Лист оцинкованный</category>
+<category id="217" parentId="92">Лист просечно-вытяжной</category>
+<category id="214" parentId="92">Лист рифленый</category>
+<category id="200">Металлические сетки</category>
+<category id="207" parentId="187">Оголовки</category>
+<category id="201">Откатные ворота</category>
+<category id="213">Поликарбонат сотовый</category>
+<category id="215">Профнастил</category>
+<category id="208" parentId="187">Сваи</category>
+<category id="181" parentId="89">Труба профильная квадратная</category>
+<category id="182" parentId="89">Труба профильная прямоугольная</category>
+<category id="53">Металлопрокат</category>
+<category id="97" parentId="53">Арматура рифленая</category>
+<category id="100" parentId="53">Балка</category>
+<category id="98" parentId="53">Квадрат</category>
+<category id="92" parentId="53">Листовой металл</category>
+<category id="93" parentId="92">Лист горячекатаный</category>
+<category id="94" parentId="92">Лист холоднокатаный</category>
+<category id="63" parentId="53">Полоса</category>
+<category id="61" parentId="53">Пруток</category>
+<category id="89" parentId="53">Труба профильная</category>
+<category id="96" parentId="53">Труба электросварная</category>
+<category id="91" parentId="53">Уголок</category>
+<category id="99" parentId="53">Швеллер</category>
+<category id="17">Uncategorized</category>
+</categories>
+<offers>

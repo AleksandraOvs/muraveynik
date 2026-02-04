@@ -1,0 +1,66 @@
+<?php get_header() ?>
+<section class="section basic-page">
+	<div class="container">
+		<div class="breadcrumbs">
+			<?php $args = array(
+				'delimiter' => '<span>&nbsp;&nbsp;&#8250;&nbsp;&nbsp;</span>'
+			);
+			woocommerce_breadcrumb($args);
+			?>
+		</div>
+
+		<h2>Результаты поиска по запросу: <span> &laquo;<?php the_search_query() ?>&raquo; </span></h2>
+		<?php
+		if (have_posts()) {
+		?>
+			<div class="products search__list">
+				<?php
+				/* Start the Loop */
+				while (have_posts()) :
+					the_post();
+					/*
+				 * Include the Post-Type-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+				 */
+				?>
+					<a class="product search__list__link element-animation" href="<?php the_permalink() ?>">
+
+						<div class="search__list__img">
+							<?php the_post_thumbnail() ?>
+						</div>
+
+						<div class="search__list__content">
+							<h2 class="search__list__heading"><?php the_title() ?></h2>
+							<?php the_excerpt() ?>
+						</div>
+					</a>
+
+				<?php
+
+
+				endwhile;
+				//the_posts_navigation();
+
+
+
+				?>
+			</div>
+			<?php
+			custom_pagination(); ?>
+		<?php
+		} else {
+			echo
+			'<div class="not-found">Ничего не нашлось :( 
+                 <div class="new-search">
+                 <p>Уточните запрос</p>'
+				. get_search_form() .
+				'
+                 <p>или перейдите <a class="new-search__link" href="' . site_url() . '">на главную страницу</a></p>
+                 </div></div>';
+		}
+		?>
+
+	</div>
+</section>
+<?php get_footer() ?>

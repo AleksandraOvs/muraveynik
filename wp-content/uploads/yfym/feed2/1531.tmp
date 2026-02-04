@@ -1,0 +1,14 @@
+<offer id="1531" available="false"  >
+<name>Электроды Арсенал 3 мм (пачка 1 кг)</name>
+<description><![CDATA[Электроды Арсенал МР-3 предназначены для сварки методом MMA.<br/>
+Применяются для сварки ответственных конструкций из углеродистых сталей.<br/>
+Работы проводятся во всех пространственных положениях, кроме вертикального вниз, постоянным током обратной полярности и переменным током.<br/>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/12/Арсенал.png</picture>
+<url>https://muraveynik.su/?post_type=product&amp;p=1531</url>
+<price>230</price>
+<currencyId>RUR</currencyId>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>135</categoryId>
+</offer>

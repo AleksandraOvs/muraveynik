@@ -1,0 +1,14 @@
+<offer id="643" available="true"  >
+<name>Пруток 10 (длина - 5,85 м)</name>
+<description><![CDATA[Пруток d 10, длина 5,85 м.<br/>
+Пруток может использоваться в том числе для изготовления изгородей, силовых частей балконов;<br/>
+в строительстве необходим для армирования конструкций<br/>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/08/Пруток.jpg</picture>
+<url>https://muraveynik.su/?post_type=product&amp;p=643</url>
+<price>400</price>
+<currencyId>RUR</currencyId>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>61</categoryId>
+</offer>

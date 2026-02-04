@@ -1,0 +1,17 @@
+<offer id="1441" available="true">
+<currencyId>RUB</currencyId>
+<price>46</price>
+<name>Арматура 12 (ГОСТ 34028-2016)</name>
+<description><![CDATA[<p>Арматура 12 мм применяется для строительства крупных объектов и усиления монолитных конструкций.<br />
+Подходит для использования в фундаментах, перекрытиях и других ответственных зонах.<br />
+Отличается высокой прочностью и долговечностью, соответствует ГОСТ 34028-2016.<br />
+Доступна для самовывоза или с доставкой на объект.<br />
+Цена указана за 1 м.</p>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/08/Арматура-1.jpg</picture>
+<url>https://muraveynik.su/product/armatura-o-12/</url>
+<vendorCode>9280</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>97</categoryId>
+</offer>

@@ -1,0 +1,2 @@
+<?php return ['Y4YM_T_Common_Currency_Switcher' => '/var/www/u1170108/data/www/muraveynik.su/wp-content/plugins/yml-for-yandex-market/includes/feeds/traits/common/trait-y4ym-t-common-currency-switcher.php',
+'Y4YM_Get_Unit' => '/var/www/u1170108/data/www/muraveynik.su/wp-content/plugins/yml-for-yandex-market/includes/feeds/class-y4ym-get-unit.php',];

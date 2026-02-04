@@ -1,0 +1,37 @@
+.inside.acf-fields.-top {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inside.acf-fields.-top .acf-field {
+    width: 50%;
+}
+
+.inside.acf-fields.-top .acf-field.acf-field-group.acf-field-5f2697647ab22 {
+    width: 100% !important;
+    background: rgba(35,194,41,.3);
+}
+
+.acf-field.acf-field-text.acf-field-5f2697837ab23 {
+    order: 1;
+}
+
+.acf-field.acf-field-text.acf-field-5f2697f87ab2a {
+    order: 2;
+}
+
+.acf-field.acf-field-text.acf-field-5f26979c7ab24 {
+    order: 3;
+}
+
+.acf-field.acf-field-text.acf-field-5f2698067ab2b {
+    order: 4;
+}
+
+.acf-field.acf-field-text.acf-field-5f2697ac7ab25 {
+    order: 5;
+}
+
+.acf-field.acf-field-text.acf-field-5f2698137ab2c {
+    order: 6;
+}

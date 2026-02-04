@@ -1,0 +1,17 @@
+<offer id="3309" available="true">
+<currencyId>RUB</currencyId>
+<price>3662</price>
+<name>Полоса 100 х 10 (длина - 6м) (ГОСТ 535-05)</name>
+<description><![CDATA[
+Полоса 100*10, цена указана за 1 шт.<br/>
+Представляет собой сплошной металлопрофиль.<br/>
+Предназначен для изготовления различных металлоконструкций и инструментов.<br/>
+]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/08/Полоса.jpg</picture>
+<url>https://muraveynik.su/product/polosa-100-10-dlina-6-m/</url>
+<vendorCode>6838</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>63</categoryId>
+</offer>

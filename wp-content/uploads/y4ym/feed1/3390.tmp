@@ -1,0 +1,15 @@
+<offer id="3390" available="true">
+<currencyId>RUB</currencyId>
+<price>1100</price>
+<name>Профнастил С8 RAL 7004 0,4х1190х2000 светло-серый</name>
+<description><![CDATA[<p>Профнастил марки С8 из холоднокатанной оцинкованной стали с полимерным покрытием, производство Россия.<br />
+Цвет светло-серый, RAL 7004.<br />
+Размеры 0,4х1190х2000.</p>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2025/08/ral-7004-grey.jpg</picture>
+<url>https://muraveynik.su/product/profnastil-c8-ral-7004-grey/</url>
+<vendorCode>1174</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>215</categoryId>
+</offer>

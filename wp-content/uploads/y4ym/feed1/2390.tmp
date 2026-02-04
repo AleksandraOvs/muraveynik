@@ -1,0 +1,23 @@
+<offer id="2390" available="true">
+<currencyId>RUB</currencyId>
+<price>2280</price>
+<name>Сетка сварная ОЦ 25х25х1,4мм 1,0х10 м</name>
+<description><![CDATA[
+
+
+<p>Сетка сварная оцинкованная в рулонах<br />
+Размер ячейки — 25х25<br />
+Диаметр проволоки 1,4 мм<br />
+Высота рулона 1м<br />
+В рулоне 10 м</p>
+
+
+]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2023/04/setka-svarnaya-otsinkovka.jpg</picture>
+<url>https://muraveynik.su/product/setka-svarnaya-ots-25-25-1-4-10-m/</url>
+<vendorCode>4695</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>200</categoryId>
+</offer>

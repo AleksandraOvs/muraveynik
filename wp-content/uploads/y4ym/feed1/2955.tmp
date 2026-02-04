@@ -1,0 +1,16 @@
+<offer id="2955" available="true">
+<currencyId>RUB</currencyId>
+<price>1540</price>
+<name>Фотоэлементы Home Gate</name>
+<description><![CDATA[<p>Фотоэлементы Home Gate<br />
+Фотоэлементы для автоматики ворот.<br />
+При обнаружении препятствия, устройство передает сигнал блоку управления и прекращает движение створок.<br />
+Комплект состоит из приемника и передатчика</p>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2024/02/58084.970.jpg</picture>
+<url>https://muraveynik.su/product/fotoelement-home-gate/</url>
+<vendorCode>7501</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>201</categoryId>
+</offer>

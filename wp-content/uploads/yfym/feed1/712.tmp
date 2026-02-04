@@ -1,0 +1,13 @@
+<offer id="712" available="true"  >
+<name>Масло моторное Lukoil Avangard Ultra 10W-40</name>
+<description><![CDATA[<p>Масло разливается в вашу тару или в нашу тару по 5 л (тара выдается бесплатно)</p>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/08/Лукойл-2.jpg</picture>
+<url>https://muraveynik.su/?post_type=product&amp;p=712</url>
+<price>140</price>
+<currencyId>RUR</currencyId>
+<vendorCode>10035</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>115</categoryId>
+</offer>

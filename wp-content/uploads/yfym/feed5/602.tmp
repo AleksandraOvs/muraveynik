@@ -1,0 +1,16 @@
+<offer id="602" available="false"  >
+<name>Квадрат 12 х 12 (длина - 3,5 м)</name>
+<description><![CDATA[<p>Квадрат стальной используется в следующих сферах:<br />
+в машиностроении, станкостроении в качестве заготовки;<br />
+на строительных площадках;<br />
+в неизменном виде для возведения заборов, ковки решёток, оград, лестничных перил;<br />
+для изготовления балконов, лестниц, билбордов и прочих металлических конструкций.</p>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/08/Квадрат.jpeg</picture>
+<url>https://muraveynik.su/?post_type=product&amp;p=602</url>
+<price>250</price>
+<currencyId>RUR</currencyId>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>98</categoryId>
+</offer>

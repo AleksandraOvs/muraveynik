@@ -1,0 +1,23 @@
+<offer id="2488" available="true">
+<currencyId>RUB</currencyId>
+<price>430</price>
+<name>Сетка ЦПВС оц 15х15х0,8мм 1,0х5м</name>
+<description><![CDATA[
+
+
+<p>Сетка ЦПВС просечно-вытяжная, №15<br />
+Размер ячейки 15х15<br />
+Диаметр проволоки 0,8 мм<br />
+Высота рулона 1,0м<br />
+В рулоне 5 м</p>
+
+
+]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2023/05/setka-15-15-tsvps.png</picture>
+<url>https://muraveynik.su/product/setka-tspvs-ots-15-15-1-5-m/</url>
+<vendorCode>5275</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>200</categoryId>
+</offer>

@@ -1,0 +1,16 @@
+<offer id="3030" available="true">
+<currencyId>RUB</currencyId>
+<price>3100</price>
+<name>Поликарбонат сотовый 4 мм (2,1 м х 6 м) 520 гр/м2</name>
+<description><![CDATA[<p>Поликарбонат сотовый прозрачный Plastilux Platinum, производство Пластилюкс (Белгород)<br />
+Плотность 520 гр/м2<br />
+Толщина 4 мм<br />
+Размер 2,1 м х 6 м</p>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2024/05/поликарбонат.png</picture>
+<url>https://muraveynik.su/product/polikarbonat-4-mm-520-g/</url>
+<vendorCode>7440</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>213</categoryId>
+</offer>

@@ -1,0 +1,13 @@
+<offer id="1575" available="true"  >
+<name>Диск отрезной 230*2,5*22 BOSCH</name>
+<description><![CDATA[Диск для резки металла. Используется для установки на МШУ<br/>
+наружный диаметр  230 мм, посадочный диаметр 22 мм, толщина 2,5 мм.<br/>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/12/Бош.jpg</picture>
+<url>https://muraveynik.su/?post_type=product&amp;p=1575</url>
+<price>126</price>
+<currencyId>RUR</currencyId>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>122</categoryId>
+</offer>

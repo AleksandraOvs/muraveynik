@@ -1,0 +1,12 @@
+<offer  id="639" available="true" >
+<name>Полоса 60 х 5 (длина -3 м)</name>
+<description><![CDATA[<p>Полоса 60*5, цена указана за 1 шт. Длина 3 м. Представляет собой сплошной металлопрофиль. Предназначен для изготовления различных металлоконструкций и инструментов.</p>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/08/Полоса.jpg</picture>
+<url>https://muraveynik.su/?post_type=product&amp;p=639</url>
+<price>350</price>
+<currencyId>RUR</currencyId>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>63</categoryId>
+</offer>

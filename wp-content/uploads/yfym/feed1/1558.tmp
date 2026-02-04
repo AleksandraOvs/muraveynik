@@ -1,0 +1,15 @@
+<offer id="1558" available="true"  >
+<name>Диск отрезной 150*1,6*22 КЕДР</name>
+<description><![CDATA[Диск для резки металла. Используется для установки на МШУ<br/>
+наружный диаметр 150 мм, посадочный диаметр 22 мм, толщина 1.6 мм.<br/>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/12/10078.jpg</picture>
+<url>https://muraveynik.su/</url>
+<price>56</price>
+<currencyId>RUR</currencyId>
+<vendor>Кедр</vendor>
+<vendorCode>9661</vendorCode>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>122</categoryId>
+</offer>

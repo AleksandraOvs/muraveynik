@@ -1,0 +1,12 @@
+<offer  id="696" available="true" >
+<name>Вода питьевая 19 л</name>
+<description><![CDATA[<p>Стоимость воды указана при самовывозе по адресу : г. Клин, ул. Терешковой , д. 48</p>]]></description>
+<picture>https://muraveynik.su/wp-content/uploads/2020/08/Вода-1.jpg</picture>
+<url>https://muraveynik.su/?post_type=product&amp;p=696</url>
+<price>150</price>
+<currencyId>RUR</currencyId>
+<store>false</store>
+<pickup>true</pickup>
+<delivery>false</delivery>
+<categoryId>86</categoryId>
+</offer>
