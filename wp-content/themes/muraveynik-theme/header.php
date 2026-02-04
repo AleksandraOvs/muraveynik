@@ -144,17 +144,7 @@
 
 							<div class="header__catalog">
 								<button class="header__catalog__link">Каталог</button>
-								<?php
-								wp_nav_menu(
-									array(
-										'theme_location' => 'menu-catalog',
-										'container' => false,
-										'menu_class' => 'catalog__menu',
-										'walker'          => new My_Walker_Nav_Menu(),
-										'depth'           => 5,
-									)
-								);
-								?>
+
 							</div><!-- ./end of header__catalog -->
 							<a class="header__cart" href="<?php echo site_url() ?>/cart/">
 								<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -194,14 +184,8 @@
 
 
 			</div><!-- ./end of container -->
-
-
 		</div>
-
-
-
 	</header>
-
 	<?php
 	if (is_front_page()) {
 		echo '<main class="grey-bg main-front">';

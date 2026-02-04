@@ -66,19 +66,27 @@ jQuery(document).ready(function ($) {
    });
 
 
-   $(document).mouseup(function (e) { // событие клика по веб-документу
-      // if (window.innerWidth >= 1200) {
-      $('.header__catalog__link').click(function (event) {
-         $('.header__catalog').find('.catalog__menu').addClass('open');
+   $(document).ready(function () {
+
+      // Открытие меню
+      $('.header__catalog__link').on('click', function (event) {
+         event.preventDefault();
+         $('.catalog-menu').addClass('open');
       });
 
-      var div = $(".catalog__menu"); // тут указываем ID элемента
-      if (!div.is(e.target) // если клик был не по нашему блоку
-         && div.has(e.target).length === 0) { // и не по его дочерним элементам
-         div.removeClass('open'); // скрываем его
-      };
+      // Закрытие по кнопке .close-menu
+      $('.close-menu').on('click', function () {
+         $('.catalog-menu').removeClass('open');
+      });
 
+      // Закрытие при клике вне меню
+      $(document).on('mouseup', function (e) {
+         var div = $('.catalog-menu');
 
-      //}
+         if (!div.is(e.target) && div.has(e.target).length === 0) {
+            div.removeClass('open');
+         }
+      });
+
    });
 })
