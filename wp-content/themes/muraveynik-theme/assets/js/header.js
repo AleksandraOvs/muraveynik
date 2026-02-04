@@ -68,20 +68,20 @@ jQuery(document).ready(function ($) {
 
    $(document).ready(function () {
 
-      // Открытие меню
+      // Открытие / закрытие по кнопке каталога
       $('.header__catalog__link').on('click', function (event) {
          event.preventDefault();
-         $('.catalog-menu').addClass('open');
+         $('.catalog__menu').toggleClass('open');
       });
 
       // Закрытие по кнопке .close-menu
       $('.close-menu').on('click', function () {
-         $('.catalog-menu').removeClass('open');
+         $('.catalog__menu').removeClass('open');
       });
 
       // Закрытие при клике вне меню
       $(document).on('mouseup', function (e) {
-         var div = $('.catalog-menu');
+         var div = $('.catalog__menu');
 
          if (!div.is(e.target) && div.has(e.target).length === 0) {
             div.removeClass('open');
