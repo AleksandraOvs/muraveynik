@@ -71,17 +71,17 @@ jQuery(document).ready(function ($) {
       // Открытие / закрытие по кнопке каталога
       $('.header__catalog__link').on('click', function (event) {
          event.preventDefault();
-         $('.catalog__menu').toggleClass('open');
+         $('.catalog-menu').toggleClass('open');
       });
 
       // Закрытие по кнопке .close-menu
       $('.close-menu').on('click', function () {
-         $('.catalog__menu').removeClass('open');
+         $('.catalog-menu').removeClass('open');
       });
 
       // Закрытие при клике вне меню
       $(document).on('mouseup', function (e) {
-         var div = $('.catalog__menu');
+         var div = $('.catalog-menu');
 
          if (!div.is(e.target) && div.has(e.target).length === 0) {
             div.removeClass('open');
