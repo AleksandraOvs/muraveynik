@@ -1624,7 +1624,20 @@ ul.ui-autocomplete {
     height: 100%;
     max-width: 420px;
     z-index: 10;
+    overflow: hidden;
+  }
+
+  .catalog-menu {
+    padding: 170px 40px 40px;
+    width: 70%;
+  }
+
+  .catalog-menu>ul {
+    height: 100%;
+    overflow: hidden;
+    overflow-y: hidden;
     overflow-y: scroll;
+    padding-right: 10px;
   }
 
 }
@@ -1678,10 +1691,6 @@ ul.ui-autocomplete {
     column-count: 2;
   }
 
-  .catalog-menu {
-    padding: 170px 60px;
-    width: 60%;
-  }
 }
 
 @media (max-width: 576px) {
