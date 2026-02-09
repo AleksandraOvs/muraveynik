@@ -72,11 +72,13 @@ jQuery(document).ready(function ($) {
       $('.header__catalog__link').on('click', function (event) {
          event.preventDefault();
          $('.catalog-menu').toggleClass('open');
+         body.classList.toggle("_fixed");
       });
 
       // Закрытие по кнопке .close-menu
       $('.close-menu').on('click', function () {
          $('.catalog-menu').removeClass('open');
+         body.classList.remove("_fixed");
       });
 
       // Закрытие при клике вне меню
