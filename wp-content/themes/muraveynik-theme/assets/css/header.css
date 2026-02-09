@@ -1764,7 +1764,7 @@ ul.ui-autocomplete {
   .catalog-menu {
     position: fixed;
     background: rgba(30, 30, 30, .98);
-    padding: 110px 80px 40px 20px;
+    padding: 110px 40px 40px 20px;
     min-width: 410px;
     width: 100%;
     min-width: auto;
