@@ -2250,6 +2250,13 @@ transition: stroke 0.3s;
   flex-basis: 30%;
 }
 
+.footer-st__menu li a {
+  color: #fff;
+  line-height: 2;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .footer__center nav ul li:not(:last-child) {
   margin-bottom: 2.3px;
 }

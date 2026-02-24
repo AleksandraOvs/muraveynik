@@ -29,9 +29,9 @@
 				<?php
 				wp_nav_menu(
 					array(
-						'theme_location' => 'menu-2',
-						'container' => 'nav',
-						'menu_class' => 'footer__menu',
+						'theme_location' => 'menu-1',
+						'container' => false,
+						'menu_class' => 'footer-st__menu',
 					)
 				);
 				?>
