@@ -515,7 +515,7 @@ function cwc_filter_products_callback()
     error_log('================ CWC DEBUG END ==================');
 
     ob_start();
-    print_r($query);
+    //print_r($query);
     if ($query->have_posts()) {
 
 
