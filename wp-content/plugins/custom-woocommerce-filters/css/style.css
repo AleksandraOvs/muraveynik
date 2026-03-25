@@ -32,7 +32,7 @@
 
 .sidebar-list li a.active {
     font-weight: 400;
-    color: #8b4512;
+    color: #6bba66;
 }
 
 .range-slider {
@@ -55,7 +55,7 @@
 }
 
 .price-range-wrap .price-range.ui-widget-content .ui-slider-range {
-    background: #a5561d;
+    background: #6bba66;
 }
 
 .range-inputs {
@@ -69,7 +69,7 @@
     -moz-border-radius: 50%;
     border-radius: 50%;
     border: none;
-    background: #8b4512;
+    background: #6bba66;
     height: 15px;
     width: 15px;
     outline: none;
@@ -106,36 +106,34 @@
 .cwc-reset-button,
 .cwc-apply-button {
     display: block;
-    margin-bottom: 15px;
     padding: 8px 12px;
-    background: #8b4512;
-    border: 1px solid #8b4512;
+    background: #F99A30;
+    border: 1px solid #F99A30;
     color: #fff;
     cursor: pointer;
     width: 100%;
-    border-radius: 4px;
     font-size: 14px;
     transition: all .5s linear;
 }
 
 .cwc-reset-button {
     background: transparent;
-    color: #8b4512;
+    color: #F99A30;
 }
 
 .cwc-reset-button:hover {
-    background: #8b4512;
+    background: #F99A30;
     color: #fff;
 }
 
 .cwc-apply-button:hover {
     background: transparent;
-    color: #8b4512;
+    color: #F99A30;
 
 }
 
 .cwc-show-more {
-    color: #8b4512;
+    color: #F99A30;
     margin-top: 15px;
 }
 
@@ -161,7 +159,7 @@
 }
 
 .sidebar-list li a.filter-item.active span {
-    background: #8b4512;
+    background: #6bba66;
     transition: all .5s linear;
 }
 
@@ -229,7 +227,7 @@
 }
 
 .close-filters:hover svg path {
-    fill: #8b4512;
+    fill: #6bba66;
 }
 
 .close-filters svg {
@@ -249,7 +247,7 @@
 Start Sidebar Area Wrapper
 ================================*/
 .single-sidebar-wrap {
-    margin-bottom: 58px;
+    margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 767.98px),
@@ -267,8 +265,34 @@ only screen and (min-width: 768px) and (max-width: 991.98px) {
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 1;
-    margin-top: 5px;
-    margin-bottom: 25px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.sidebar-area-wrapper._filters {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebar-area-wrapper._filters>div:nth-child(3) {
+    width: 100%;
+}
+
+.cwc-filter-actions {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.single-sidebar-wrap {
+    width: calc(100% / 4);
+    min-width: 140px;
+}
+
+.cwc-filter-actions button {
+    width: max-content;
+    padding: 7px 25px;
 }
 
 @media (max-width: 992px) {
