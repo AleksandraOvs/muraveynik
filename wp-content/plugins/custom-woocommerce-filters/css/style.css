@@ -279,10 +279,8 @@ only screen and (min-width: 768px) and (max-width: 991.98px) {
     flex-wrap: wrap;
 }
 
-
-
 .single-sidebar-wrap.price-filter-wrap {
-    width: 100%;
+    width: 70%;
 }
 
 .cwc-filter-actions {
@@ -304,7 +302,6 @@ only screen and (min-width: 768px) and (max-width: 991.98px) {
 
 .sidebar-area-wrapper._filters {
     display: flex;
-    flex-direction: column;
 }
 
 .sidebar-list {
