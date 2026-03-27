@@ -197,7 +197,6 @@ function cwc_render_attribute_filter($taxonomy, $title, $current_cat_id = 0)
                 <?php foreach ($filtered_terms as $term): ?>
                     <li>
                         <a href="#" class="filter-item" data-slug="<?php echo esc_attr($term->slug); ?>">
-                            <span class="filter-checkbox"></span>
                             <?php echo esc_html($term->name); ?> <?php //echo $term->count; 
                                                                     ?>
                         </a>

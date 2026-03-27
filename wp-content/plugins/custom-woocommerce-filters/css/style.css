@@ -295,6 +295,22 @@ only screen and (min-width: 768px) and (max-width: 991.98px) {
     padding: 7px 25px;
 }
 
+.sidebar-area-wrapper._filters {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-list {
+    display: flex;
+    gap: 10px;
+}
+
+.sidebar-list li {
+    background: #e1e1e1;
+    padding: 7px;
+    border-radius: 5px;
+}
+
 @media (max-width: 992px) {
 
     .sidebar-area-wrapper._filters {
