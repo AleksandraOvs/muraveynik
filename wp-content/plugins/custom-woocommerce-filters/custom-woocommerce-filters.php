@@ -286,7 +286,7 @@ function cwc_render_price_filter()
     list($min, $max) = cwc_get_category_price_range($current_cat_id);
 
     ob_start(); ?>
-    <div class="single-sidebar-wrap">
+    <div class="single-sidebar-wrap price-filter-wrap">
         <h4 class="sidebar-title">Цена</h4>
         <div class="sidebar-body">
             <div class="price-range-wrap">
