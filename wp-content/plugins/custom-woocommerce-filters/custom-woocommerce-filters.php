@@ -336,7 +336,7 @@ function cwc_shop_filters_shortcode()
         </div>
         <?php echo cwc_render_price_filter();        ?>
 
-        <div class="single-sidebar-wrap">
+        <div class="single-sidebar-wrap instock-filter-wrap">
             <div class="sidebar-body">
                 <ul class="sidebar-list" data-taxonomy="instock_filter">
                     <li>

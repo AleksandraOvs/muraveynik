@@ -35,6 +35,11 @@
     color: #fff;
 }
 
+.filter-item.instock-filter {
+    background: transparent;
+    padding: 0;
+}
+
 .range-slider {
     margin-top: 10px;
 }
@@ -274,7 +279,9 @@ only screen and (min-width: 768px) and (max-width: 991.98px) {
     flex-wrap: wrap;
 }
 
-.sidebar-area-wrapper._filters>div:nth-child(3) {
+
+
+.single-sidebar-wrap.price-filter-wrap {
     width: 100%;
 }
 
