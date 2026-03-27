@@ -340,7 +340,7 @@ function cwc_shop_filters_shortcode()
             <div class="sidebar-body">
                 <ul class="sidebar-list" data-taxonomy="instock_filter">
                     <li>
-                        <a href="#" class="filter-item" data-slug="instock">
+                        <a href="#" class="filter-item instock-filter" data-slug="instock">
                             <span class="filter-checkbox"></span> Есть в наличии
                         </a>
                     </li>
