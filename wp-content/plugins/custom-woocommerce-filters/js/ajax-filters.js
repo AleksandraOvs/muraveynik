@@ -228,43 +228,43 @@
     /* -------------------
  * Показать ещё (атрибуты)
  * ------------------- */
-    // function initShowMoreFilters(context) {
+    function initShowMoreFilters(context) {
 
-    //     $(context).find('ul.sidebar-list').each(function () {
+        $(context).find('ul.sidebar-list').each(function () {
 
-    //         var $list = $(this);
-    //         var $items = $list.find('li');
+            var $list = $(this);
+            var $items = $list.find('li');
 
-    //         if ($items.length <= 5) return;
+            if ($items.length <= 5) return;
 
-    //         // // прячем всё после 5
-    //         // $items.slice(5).hide();
+            // // прячем всё после 5
+            // $items.slice(5).hide();
 
-    //         // защита от повторного добавления кнопки
-    //         if ($list.next('.cwc-show-more').length) return;
+            // защита от повторного добавления кнопки
+            if ($list.next('.cwc-show-more').length) return;
 
-    //         var $btn = $('<button type="button" class="cwc-show-more">Показать ещё</button>');
+            var $btn = $('<button type="button" class="cwc-show-more">Показать ещё</button>');
 
-    //         $btn.on('click', function () {
+            $btn.on('click', function () {
 
-    //             var expanded = $btn.hasClass('opened');
+                var expanded = $btn.hasClass('opened');
 
-    //             if (!expanded) {
-    //                 $items.show();
-    //                 $btn
-    //                     .addClass('opened')
-    //                     .text('Скрыть');
-    //             } else {
-    //                 $items.slice(5).hide();
-    //                 $btn
-    //                     .removeClass('opened')
-    //                     .text('Показать ещё');
-    //             }
-    //         });
+                if (!expanded) {
+                    $items.show();
+                    $btn
+                        .addClass('opened')
+                        .text('Скрыть');
+                } else {
+                    $items.slice(5).hide();
+                    $btn
+                        .removeClass('opened')
+                        .text('Показать ещё');
+                }
+            });
 
-    //         $list.after($btn);
-    //     });
-    // }
+            $list.after($btn);
+        });
+    }
 
     $(function () {
         cwcIsInit = false;
