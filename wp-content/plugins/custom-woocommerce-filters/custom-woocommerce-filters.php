@@ -83,7 +83,7 @@ function cwc_clean_title($title)
 }
 
 /* ---------------------------------------------------
- * Рендер фильтра для всех атрибутов
+ * Рендер фильтра для всех атрибутов без заголовка
  * --------------------------------------------------- */
 function cwc_render_attribute_filter($taxonomy, $title, $current_cat_id = 0)
 {
@@ -110,41 +110,17 @@ function cwc_render_attribute_filter($taxonomy, $title, $current_cat_id = 0)
 
     ob_start(); ?>
     <div class="single-sidebar-wrap">
-        <h4 class="sidebar-title"><?php echo esc_html(cwc_clean_title($title)); ?></h4>
         <div class="sidebar-body">
             <ul class="sidebar-list" data-taxonomy="<?php echo esc_attr($taxonomy); ?>">
                 <?php foreach ($terms as $term): ?>
                     <li>
                         <a href="#" class="filter-item" data-slug="<?php echo esc_attr($term->slug); ?>">
-                            <?php echo esc_html($term->name); ?>
+                            <span class="filter-name"><?php echo esc_html(cwc_clean_title($title)); ?></span>
+                            <span class="filter-value"><?php echo esc_html($term->name); ?></span>
                         </a>
                     </li>
                 <?php endforeach; ?>
             </ul>
-        </div>
-    </div>
-<?php
-    return ob_get_clean();
-}
-
-/* ---------------------------------------------------
- * Фильтр цены
- * --------------------------------------------------- */
-function cwc_render_price_filter()
-{
-    $current_cat_id = is_product_category() ? get_queried_object_id() : 0;
-    list($min, $max) = cwc_get_category_price_range($current_cat_id);
-
-    ob_start(); ?>
-    <div class="single-sidebar-wrap price-filter-wrap">
-        <h4 class="sidebar-title">Цена</h4>
-        <div class="sidebar-body">
-            <div class="price-range-wrap">
-                <div class="range-inputs">
-                    <div class="price-input"><span class="price-prefix">От</span><input type="number" id="min_price" value="<?php echo $min; ?>"></div>
-                    <div class="price-input"><span class="price-prefix">До</span><input type="number" id="max_price" value="<?php echo $max; ?>"></div>
-                </div>
-            </div>
         </div>
     </div>
 <?php
@@ -171,22 +147,27 @@ function cwc_shop_filters_shortcode()
     <div class="sidebar-area-wrapper _filters" data-current-cat="<?php echo esc_attr($current_cat_id); ?>">
         <h3 class="filters-heading">Фильтры</h3>
 
-        <?php echo cwc_render_price_filter(); ?>
-
-        <div class="single-sidebar-wrap instock-filter-wrap">
-            <div class="sidebar-body">
-                <ul class="sidebar-list" data-taxonomy="instock_filter">
-                    <li>
-                        <a href="#" class="filter-item instock-filter" data-slug="instock"><span class="filter-checkbox"></span> Есть в наличии</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <?php //echo cwc_render_price_filter(); 
+        ?>
 
         <?php echo implode('', $filters); ?>
 
         <div class="cwc-filter-actions">
-            <button id="cwc-apply-filters" class="cwc-apply-button">Применить</button>
+            <div class="single-sidebar-wrap instock-filter-wrap">
+                <div class="sidebar-body">
+                    <ul class="sidebar-list" data-taxonomy="instock_filter">
+                        <li>
+                            <a href="#" class="filter-item instock-filter" data-slug="instock">
+                                <span class="filter-checkbox">
+                                    <svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.17202 10.162L1.70202 6.69202C1.51504 6.50504 1.26145 6.4 0.99702 6.4C0.732594 6.4 0.478998 6.50504 0.292021 6.69202C0.105043 6.879 0 7.13259 0 7.39702C0 7.52795 0.0257889 7.6576 0.0758939 7.77856C0.125999 7.89953 0.199439 8.00944 0.292021 8.10202L4.47202 12.282C4.86202 12.672 5.49202 12.672 5.88202 12.282L16.462 1.70202C16.649 1.51504 16.754 1.26145 16.754 0.997021C16.754 0.732594 16.649 0.478998 16.462 0.292021C16.275 0.105043 16.0214 0 15.757 0C15.4926 0 15.239 0.105043 15.052 0.292021L5.17202 10.162Z" fill="#fff" />
+                                    </svg>
+
+                                </span> Есть в наличии</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <button id="cwc-reset-filters" class="cwc-reset-button">Сбросить</button>
         </div>
     </div>
