@@ -168,7 +168,7 @@ section.widget {
 }
 
 
-.sidebar-list li a.filter-item {
+a.filter-item {
     font-size: 16px;
     position: relative;
     -webkit-transition: 0.2s 0.2s ease-out;
