@@ -209,6 +209,7 @@ function cwc_filter_products_callback()
 
         // берём только последнее выбранное значение
         $term = sanitize_text_field(is_array($value) ? end($value) : $value);
+        $term = urldecode($term);
 
         $tax_query[] = [
             'taxonomy' => $taxonomy,

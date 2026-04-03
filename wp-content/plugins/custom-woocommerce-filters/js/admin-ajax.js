@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const activeFilters = {};
         filtersWrapper.querySelectorAll('.filter-item.active').forEach(el => {
             const taxonomy = el.closest('[data-taxonomy]')?.dataset.taxonomy;
-            const slug = el.dataset.slug;
+            const slug = decodeURIComponent(el.dataset.slug);
             if (taxonomy && slug) {
                 // записываем только последнее значение
                 activeFilters[taxonomy] = slug;
