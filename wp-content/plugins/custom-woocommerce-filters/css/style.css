@@ -195,7 +195,7 @@ a.filter-item {
     background: #6bba66;
 }
 
-.sidebar-list li a.filter-item span.filter-value {
+a.filter-item span.filter-value {
     position: relative;
     width: 100%;
     height: 100%;
@@ -226,14 +226,14 @@ a.filter-item {
     transition: all .5s linear;
 }
 
-.sidebar-list li a.filter-item:hover span.filter-name {
+a.filter-item:hover span.filter-name {
     display: flex;
     width: max-content;
     transform: none;
     opacity: 1;
 }
 
-.sidebar-list li a.filter-item span.filter-name:after {
+a.filter-item span.filter-name:after {
     content: "";
     position: absolute;
     bottom: -7px;
@@ -247,7 +247,7 @@ a.filter-item {
 }
 
 
-.sidebar-list li a.filter-item.active span.filter-value {
+a.filter-item.active span.filter-value {
     background: #6bba66;
     transition: all .5s linear;
 }
