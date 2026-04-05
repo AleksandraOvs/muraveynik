@@ -431,7 +431,7 @@ Start Sidebar Area Wrapper
         margin-top: 20px;
     }
 
-    .cwc-filter-params {
+    /* .cwc-filter-params {
         display: flex;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
@@ -442,7 +442,7 @@ Start Sidebar Area Wrapper
         list-style: none;
         scroll-behavior: smooth;
         padding-bottom: 10px;
-    }
+    } */
 }
 
 @media (max-width: 480px) {
