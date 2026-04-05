@@ -19,6 +19,8 @@ section.widget {
 
 .sidebar-list li {
     margin-bottom: 5px;
+    flex-grow: 1;
+    min-width: max-content;
 }
 
 .sidebar-list li a {
@@ -368,8 +370,17 @@ Start Sidebar Area Wrapper
 }
 
 .cwc-filter-params {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, auto);
     gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 6px 10px;
+    margin: 0;
+    list-style: none;
+    scroll-behavior: smooth;
 }
 
 .single-sidebar-wrap {}
@@ -387,9 +398,12 @@ Start Sidebar Area Wrapper
 
 .sidebar-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 10px;
+    max-width: max-content;
 }
+
+
 
 .sidebar-list li {}
 
