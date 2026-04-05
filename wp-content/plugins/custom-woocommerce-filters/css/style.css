@@ -445,6 +445,22 @@ Start Sidebar Area Wrapper
     } */
 }
 
+@media (max-width: 768px) {
+    .cwc-filter-params {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(2, auto);
+        gap: 10px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        padding: 6px 10px;
+        margin: 0;
+        list-style: none;
+        scroll-behavior: smooth;
+    }
+}
+
 @media (max-width: 480px) {
     .sidebar-list li a.filter-item {
         font-size: 14px;
