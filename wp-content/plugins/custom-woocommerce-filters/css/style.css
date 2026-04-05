@@ -209,6 +209,15 @@ a.filter-item {
     background: #f5f5f5;
 }
 
+.filter-item {
+    position: relative;
+}
+
+.filter-item:hover .filter-name {
+    display: block;
+    opacity: 1;
+}
+
 .filter-name {
     position: absolute;
     top: -30px;
@@ -216,6 +225,7 @@ a.filter-item {
     background: rgb(129, 129, 129, 1);
     color: #fff;
     cursor: pointer;
+    font-size: 12px;
     width: max-content;
     left: 6px;
     filter: drop-shadow(0 0 1px rgba(0, 0, 0, .2));
