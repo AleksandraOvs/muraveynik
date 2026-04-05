@@ -110,18 +110,18 @@ function cwc_render_attribute_filter($taxonomy, $title, $current_cat_id = 0)
 
     ob_start(); ?>
 
-    <div class="sidebar-body">
-        <ul class="sidebar-list" data-taxonomy="<?php echo esc_attr($taxonomy); ?>">
-            <?php foreach ($terms as $term): ?>
-                <li>
-                    <a href="#" class="filter-item" data-slug="<?php echo esc_attr($term->slug); ?>">
-                        <span class="filter-name"><?php echo esc_html(cwc_clean_title($title)); ?></span>
-                        <span class="filter-value"><?php echo esc_html($term->name); ?></span>
-                    </a>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
+
+    <ul class="sidebar-list" data-taxonomy="<?php echo esc_attr($taxonomy); ?>">
+        <?php foreach ($terms as $term): ?>
+            <li>
+                <a href="#" class="filter-item" data-slug="<?php echo esc_attr($term->slug); ?>">
+                    <span class="filter-name"><?php echo esc_html(cwc_clean_title($title)); ?></span>
+                    <span class="filter-value"><?php echo esc_html($term->name); ?></span>
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+
 
 <?php
     return ob_get_clean();
