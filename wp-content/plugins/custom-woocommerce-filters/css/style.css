@@ -474,6 +474,7 @@ Start Sidebar Area Wrapper
         margin: 0;
         list-style: none;
         scroll-behavior: smooth;
+        padding-bottom: 20px;
     }
 }
 
