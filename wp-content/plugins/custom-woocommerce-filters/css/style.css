@@ -370,17 +370,20 @@ Start Sidebar Area Wrapper
 }
 
 .cwc-filter-params {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-rows: repeat(2, auto);
+    display: flex;
+    /* grid-auto-flow: column;
+  grid-template-rows: repeat(2, auto); */
     gap: 10px;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     padding: 6px 10px;
+    padding-bottom: 6px;
     margin: 0;
     list-style: none;
     scroll-behavior: smooth;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .single-sidebar-wrap {}
