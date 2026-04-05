@@ -197,7 +197,7 @@ a.filter-item {
     background: #6bba66;
 }
 
-a.filter-item span.filter-value {
+.filter-value {
     position: relative;
     width: 100%;
     height: 100%;
@@ -215,6 +215,7 @@ a.filter-item span.filter-value {
     font-size: 14px;
     background: rgb(129, 129, 129, 1);
     color: #fff;
+    cursor: pointer;
     width: max-content;
     left: 6px;
     filter: drop-shadow(0 0 1px rgba(0, 0, 0, .2));
@@ -228,11 +229,14 @@ a.filter-item span.filter-value {
     transition: all .5s linear;
 }
 
-a.filter-item:hover span.filter-name {
-    display: flex;
-    width: max-content;
-    transform: none;
-    opacity: 1;
+.filter-value:hover {
+    background: #6bba66;
+    color: #fff;
+}
+
+.filter-item.active .filter-value {
+    background: #6bba66;
+    color: #fff;
 }
 
 a.filter-item span.filter-name:after {
@@ -436,3 +440,19 @@ Start Sidebar Area Wrapper
         font-size: 14px;
     }
 }
+
+.cwc-filter-params {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* .filter-item {
+    display: inline-flex;
+    gap: 6px;
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+} */

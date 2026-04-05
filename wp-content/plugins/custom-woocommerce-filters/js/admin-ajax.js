@@ -11,18 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
             current_cat_id: filtersWrapper.dataset.currentCat || 0
         };
 
-        // текстовые фильтры: берём только последнее активное значение для каждого атрибута
         const activeFilters = {};
+
         filtersWrapper.querySelectorAll('.filter-item.active').forEach(el => {
-            const taxonomy = el.closest('[data-taxonomy]')?.dataset.taxonomy;
+            const taxonomy = el.dataset.taxonomy; // ✅ теперь отсюда
             const slug = decodeURIComponent(el.dataset.slug);
+
             if (taxonomy && slug) {
-                // записываем только последнее значение
-                activeFilters[taxonomy] = slug;
+                activeFilters[taxonomy] = slug; // одно значение на атрибут
             }
         });
 
-        // добавляем в data
+        // собираем данные
         for (const [taxonomy, slug] of Object.entries(activeFilters)) {
             data['filter_' + taxonomy] = slug;
         }
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             data.instock = 1;
         }
 
-        console.log('Filters data for AJAX:', data); // отладка
+        console.log('Filters data for AJAX:', data);
 
         return data;
     }
@@ -49,7 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
             .then(res => res.json())
             .then(res => {
-                console.log('Server debug info:', res); // отладка ответа
+                console.log('Server debug info:', res);
+
                 if (res.success) {
                     productsWrapper.innerHTML = res.data.html;
                 } else {
@@ -61,36 +62,43 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
-    // клики по фильтрам
+    // клик по фильтру
     filtersWrapper.addEventListener('click', (e) => {
         const filterItem = e.target.closest('.filter-item');
         if (!filterItem) return;
 
         e.preventDefault();
-        filterItem.classList.toggle('active');
 
-        // отключаем множественный выбор для одного атрибута
-        const taxonomy = filterItem.closest('[data-taxonomy]')?.dataset.taxonomy;
-        if (taxonomy && filterItem.classList.contains('active')) {
-            filtersWrapper.querySelectorAll(`.filter-item.active`).forEach(el => {
-                if (el !== filterItem && el.closest('[data-taxonomy]')?.dataset.taxonomy === taxonomy) {
-                    el.classList.remove('active');
-                }
-            });
+        const taxonomy = filterItem.dataset.taxonomy; // ✅ теперь напрямую
+
+        // если уже активен — снимаем
+        if (filterItem.classList.contains('active')) {
+            filterItem.classList.remove('active');
+        } else {
+            // ❗ убираем другие элементы этого же атрибута
+            filtersWrapper.querySelectorAll(`.filter-item.active[data-taxonomy="${taxonomy}"]`)
+                .forEach(el => el.classList.remove('active'));
+
+            filterItem.classList.add('active');
         }
 
         applyFilters();
     });
 
-    // кнопки "Применить" и "Сбросить"
+    // apply / reset
     filtersWrapper.addEventListener('click', (e) => {
+
         if (e.target.matches('#cwc-apply-filters')) {
             applyFilters();
         }
+
         if (e.target.matches('#cwc-reset-filters')) {
-            filtersWrapper.querySelectorAll('.filter-item').forEach(el => el.classList.remove('active'));
+            filtersWrapper.querySelectorAll('.filter-item.active')
+                .forEach(el => el.classList.remove('active'));
+
             applyFilters();
         }
+
     });
 
 });

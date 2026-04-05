@@ -85,11 +85,17 @@ function cwc_clean_title($title)
 /* ---------------------------------------------------
  * Рендер фильтра для всех атрибутов без заголовка
  * --------------------------------------------------- */
+/* ---------------------------------------------------
+ * Рендер фильтра атрибутов (единый поток)
+ * --------------------------------------------------- */
 function cwc_render_attribute_filter($taxonomy, $title, $current_cat_id = 0)
 {
-    $args = ['taxonomy' => $taxonomy, 'hide_empty' => true];
+    $args = [
+        'taxonomy'   => $taxonomy,
+        'hide_empty' => true
+    ];
 
-    // Если категория задана, получаем ID товаров в ней
+    // Фильтрация по категории
     if ($current_cat_id) {
         $products = wc_get_products([
             'status' => 'publish',
@@ -102,28 +108,34 @@ function cwc_render_attribute_filter($taxonomy, $title, $current_cat_id = 0)
         ]);
 
         $product_ids = wp_list_pluck($products, 'id');
-        if ($product_ids) $args['object_ids'] = $product_ids;
+
+        if (!empty($product_ids)) {
+            $args['object_ids'] = $product_ids;
+        }
     }
 
     $terms = get_terms($args);
     if (!$terms || is_wp_error($terms)) return '';
 
-    ob_start(); ?>
+    ob_start();
 
+    foreach ($terms as $term): ?>
 
-    <ul class="sidebar-list" data-taxonomy="<?php echo esc_attr($taxonomy); ?>">
-        <?php foreach ($terms as $term): ?>
-            <li>
-                <a href="#" class="filter-item" data-slug="<?php echo esc_attr($term->slug); ?>">
-                    <span class="filter-name"><?php echo esc_html(cwc_clean_title($title)); ?></span>
-                    <span class="filter-value"><?php echo esc_html($term->name); ?></span>
-                </a>
-            </li>
-        <?php endforeach; ?>
-    </ul>
+        <div
+            class="filter-item"
+            data-taxonomy="<?php echo esc_attr($taxonomy); ?>"
+            data-slug="<?php echo esc_attr($term->slug); ?>">
+            <div class="filter-name">
+                <?php echo esc_html(cwc_clean_title($title)); ?>
+            </div>
 
+            <div class="filter-value">
+                <?php echo esc_html($term->name); ?>
+            </div>
+        </div>
 
-<?php
+    <?php endforeach;
+
     return ob_get_clean();
 }
 
