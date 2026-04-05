@@ -421,31 +421,14 @@ Start Sidebar Area Wrapper
     gap: 10px;
 }
 
-.sidebar-list {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 10px;
-    max-width: max-content;
-}
-
-
-
-.sidebar-list li {}
-
-.sidebar-list li a {
-    /* background: #e1e1e1; */
-    transition: all .5s linear;
-}
-
-.sidebar-list li a:hover span.filter-value {
-    background: #6bba66;
-    color: #fff;
-    transition: all .5s linear;
-}
 
 @media (max-width: 992px) {
     .sidebar-area-wrapper._filters {
         margin-top: 40px;
+    }
+
+    .filter-item:hover .filter-name {
+        display: none;
     }
 
     /* .cwc-filter-params {
