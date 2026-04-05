@@ -367,6 +367,11 @@ Start Sidebar Area Wrapper
     border-top: 1px solid #f5f5f5;
 }
 
+.cwc-filter-params {
+    display: flex;
+    gap: 10px;
+}
+
 .single-sidebar-wrap {}
 
 .cwc-filter-actions button {

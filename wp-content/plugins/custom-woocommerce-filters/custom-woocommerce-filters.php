@@ -150,7 +150,10 @@ function cwc_shop_filters_shortcode()
         <?php //echo cwc_render_price_filter(); 
         ?>
 
-        <?php echo implode('', $filters); ?>
+        <div class="cwc-filter-params">
+            <?php echo implode('', $filters); ?>
+        </div>
+
 
         <div class="cwc-filter-actions">
             <div class="single-sidebar-wrap instock-filter-wrap">
