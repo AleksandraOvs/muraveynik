@@ -7,6 +7,22 @@ section.widget {
     margin-bottom: 20px;
 }
 
+.cwc-filter-params {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* .filter-item {
+    display: inline-flex;
+    gap: 6px;
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+} */
+
 .sidebar-title {
     font-weight: bold;
     margin-bottom: 10px;
@@ -466,19 +482,3 @@ Start Sidebar Area Wrapper
         font-size: 14px;
     }
 }
-
-.cwc-filter-params {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-/* .filter-item {
-    display: inline-flex;
-    gap: 6px;
-    padding: 6px 10px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    cursor: pointer;
-    white-space: nowrap;
-} */
