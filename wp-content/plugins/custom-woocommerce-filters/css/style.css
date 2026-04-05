@@ -383,7 +383,6 @@ Start Sidebar Area Wrapper
     list-style: none;
     scroll-behavior: smooth;
     padding-bottom: 10px;
-    flex-wrap: wrap;
 }
 
 .single-sidebar-wrap {}
