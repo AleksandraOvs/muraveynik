@@ -445,7 +445,7 @@ Start Sidebar Area Wrapper
 
 @media (max-width: 992px) {
     .sidebar-area-wrapper._filters {
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     /* .cwc-filter-params {
