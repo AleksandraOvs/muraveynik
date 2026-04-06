@@ -558,6 +558,7 @@ button.menu-toggle.active .bar:nth-child(3) {
   top: 0;
   right: 0;
   height: 0;
+  overflow: hidden;
   width: 100%;
   background: rgba(30, 30, 30, 0.98);
   opacity: 0;
