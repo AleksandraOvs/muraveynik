@@ -557,7 +557,7 @@ button.menu-toggle.active .bar:nth-child(3) {
   z-index: 5;
   top: 0;
   right: 0;
-  height: max-content;
+  height: 0;
   width: 100%;
   background: rgba(30, 30, 30, 0.98);
   opacity: 0;
@@ -569,6 +569,7 @@ button.menu-toggle.active .bar:nth-child(3) {
 
 .mobile-menu.active {
   opacity: 1;
+  height: 100%;
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
