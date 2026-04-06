@@ -427,10 +427,6 @@ Start Sidebar Area Wrapper
         margin-top: 40px;
     }
 
-    .filter-item:hover .filter-name {
-        display: none;
-    }
-
     /* .cwc-filter-params {
         display: flex;
         overflow-x: auto;
