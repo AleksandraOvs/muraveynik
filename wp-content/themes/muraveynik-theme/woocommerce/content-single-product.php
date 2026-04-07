@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying product content in the single-product.php template
  *
@@ -15,7 +16,7 @@
  * @version 3.6.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 global $product;
 
@@ -24,19 +25,19 @@ global $product;
  *
  * @hooked woocommerce_output_all_notices - 10
  */
-do_action( 'woocommerce_before_single_product' );
+do_action('woocommerce_before_single_product');
 ?>
 
-<h2 class="product__title"><?php the_title()?></h2>
+<h2 class="product__title"><?php the_title() ?></h2>
 <div class="single-product__wrapper">
 	<?php
-		/**
-		 * Hook: woocommerce_before_single_product_summary.
-		 *
-		 * @hooked woocommerce_show_product_sale_flash - 10
-		 * @hooked woocommerce_show_product_images - 20
-		 */
-		do_action( 'woocommerce_before_single_product_summary' );
+	/**
+	 * Hook: woocommerce_before_single_product_summary.
+	 *
+	 * @hooked woocommerce_show_product_sale_flash - 10
+	 * @hooked woocommerce_show_product_images - 20
+	 */
+	do_action('woocommerce_before_single_product_summary');
 	?>
 
 	<div class="summary entry-summary">
@@ -44,64 +45,63 @@ do_action( 'woocommerce_before_single_product' );
 			<?php
 			$attributes = $product->get_attributes(); ?>
 			<h3 class="wc_title_h3">Характеристики</h3>
-			<ul class="products-attrs__list " >
+
+			<ul class="products-attrs__list">
+
 				<li class="product-attrs__list__item">
 					<p class="product-attrs__list__item__name">Артикул:</p>
-					<p> <?php echo ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ); ?></p>
+					<p>
+						<?php echo ($sku = $product->get_sku()) ? $sku : esc_html__('N/A', 'woocommerce'); ?>
+					</p>
 				</li>
-				
-				<?php
-					foreach ( $attributes as $attribute ) :
-						if ( empty( $attribute['is_visible'] ) || ( $attribute['is_taxonomy'] && ! taxonomy_exists( $attribute['name'] ) ) ) {
-							continue;
-					} else {
-						$has_row = true;
-					}
-					//  if ( ( $alt = $alt * -1 ) == 1 ) echo 'alt'; ?>
-					<li class="product-attrs__list__item">
-						<p class="product-attrs__list__item__name">
-							<?php echo wc_attribute_label( $attribute['name'] ) . ':'; ?>
-						</p>
-				<?php
-					if ( $attribute['is_taxonomy'] ) {
-						$values = wc_get_product_terms( $product->id, $attribute['name'], array( 'fields' => 'names' ) );
-							echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
-					} else {
 
-					// Convert pipes to commas and display values
-					$values = array_map( 'trim', explode( WC_DELIMITER, $attribute['value'] ) );
-						echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
-					}
+				<?php
+				$attributes = carbon_get_post_meta(get_the_ID(), 'product_attributes_custom');
+
+				if (!empty($attributes)) :
+					foreach ($attributes as $item) :
+						if (empty($item['attribute_name']) && empty($item['attribute_value'])) continue;
 				?>
-					</li>	
-					<?php endforeach; ?>
+						<li class="product-attrs__list__item">
+							<p class="product-attrs__list__item__name">
+								<?php echo esc_html($item['attribute_name']); ?>:
+							</p>
+							<p>
+								<?php echo esc_html($item['attribute_value']); ?>
+							</p>
+						</li>
+				<?php
+					endforeach;
+				endif;
+				?>
+
 			</ul>
-			
-			<?php if ($forclients = carbon_get_theme_option('crb_for_clients')){ ?>
 
-			<h3 class="wc_title_h3">Покупателям</h3>
+			<?php if ($forclients = carbon_get_theme_option('crb_for_clients')) { ?>
+
+				<h3 class="wc_title_h3">Покупателям</h3>
 				<ul class="forclients__list">
-			<?php foreach ($forclients as $forclients_item){
-				?>
-				<li class="forclients__item">
-					<p class="forclients__item__name"><?php echo $forclients_item[('crb_for_clients_head')]?></p>
-					<p class="forclient__item__desc"><?php echo $forclients_item[('crb_for_clients_text')]?></p>
-				</li>
+					<?php foreach ($forclients as $forclients_item) {
+					?>
+						<li class="forclients__item">
+							<p class="forclients__item__name"><?php echo $forclients_item[('crb_for_clients_head')] ?></p>
+							<p class="forclient__item__desc"><?php echo $forclients_item[('crb_for_clients_text')] ?></p>
+						</li>
+					<?php
+					}
+					?>
+				</ul>
 			<?php
 			}
 			?>
-				</ul>
-			<?php
- 			}
-			?>
 		</div>
-		
 
-		
-			
-	<div class="add-to-cart">
-		
-		<?php
+
+
+
+		<div class="add-to-cart">
+
+			<?php
 			/**
 			 * Hook: woocommerce_single_product_summary.
 			 *
@@ -114,30 +114,30 @@ do_action( 'woocommerce_before_single_product' );
 			 * @hooked woocommerce_template_single_sharing - 50
 			 * @hooked WC_Structured_Data::generate_product_data() - 60
 			 */
-			do_action( 'woocommerce_single_product_summary' );
-		?>
-		
-	</div>
-	
+			do_action('woocommerce_single_product_summary');
+			?>
+
+		</div>
+
 	</div>
 
-	
+
 
 </div>
 
-		</div>
-	
-	
-	<?php
-	/**
-	 * Hook: woocommerce_after_single_product_summary.
-	 *
-	 * @hooked woocommerce_output_product_data_tabs - 10
-	 * @hooked woocommerce_upsell_display - 15
-	 * @hooked woocommerce_output_related_products - 20
-	 */
-	do_action( 'woocommerce_after_single_product_summary' );
-	?>
+</div>
 
 
-<?php do_action( 'woocommerce_after_single_product' ); ?>
+<?php
+/**
+ * Hook: woocommerce_after_single_product_summary.
+ *
+ * @hooked woocommerce_output_product_data_tabs - 10
+ * @hooked woocommerce_upsell_display - 15
+ * @hooked woocommerce_output_related_products - 20
+ */
+do_action('woocommerce_after_single_product_summary');
+?>
+
+
+<?php do_action('woocommerce_after_single_product'); ?>
