@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Product Loop Start
  *
@@ -15,14 +16,23 @@
  * @version     3.3.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
 	exit;
 }
 ?>
 <div class="woocommerce-loop">
-<?php
-if (is_active_sidebar( 'filter-sidebar' )){
-	dynamic_sidebar( 'filter-sidebar' );
-}
-?>
-<ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">
+
+	<?php
+	if (
+		is_active_sidebar('filter-sidebar') &&
+		is_product_category()
+	) {
+		$term = get_queried_object();
+
+		if ($term && $term->parent != 0) {
+			dynamic_sidebar('filter-sidebar');
+		}
+	}
+	?>
+
+	<ul class="products columns-<?php echo esc_attr(wc_get_loop_prop('columns')); ?>">
