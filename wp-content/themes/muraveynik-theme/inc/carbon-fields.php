@@ -111,14 +111,18 @@ function site_carbon()
                 ))
         ));
 
-    // Container::make('post_meta', 'Вкладки на странице товара')
-    //             ->show_on_post_type( 'product' )
-    //             ->add_fields( array(
-    //               //  Field::make('rich_text', 'crb_product_characteristics', 'Характеристики'),
-    //                 Field::make('rich_text', 'crb_product_delivery', 'Информация о доставке'),
-    //                 Field::make('rich_text', 'crb_product_pay', 'Информация об оплате')
-
-    // ));
+    Container::make('post_meta', 'Характеристики товара')
+        ->show_on_post_type('product')
+        ->add_fields(array(
+            Field::make('complex', 'product_attributes_custom', 'Характеристики')
+                ->add_fields(array(
+                    Field::make('text', 'attribute_name', 'Характеристика')
+                        ->set_width(50),
+                    Field::make('text', 'attribute_value', 'Значение')
+                        ->set_width(50),
+                ))
+                ->set_header_template('<%- attribute_name ? attribute_name : "Характеристика" %>')
+        ));
 
     Container::make('post_meta', 'Контакты')
         ->show_on_page('kontakty')
