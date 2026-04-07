@@ -447,6 +447,7 @@ Start Sidebar Area Wrapper
         grid-auto-flow: column;
         grid-template-rows: repeat(2, auto);
         gap: 10px;
+        padding-bottom: 7px;
         overflow-x: auto;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
