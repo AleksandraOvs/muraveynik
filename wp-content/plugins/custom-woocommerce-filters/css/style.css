@@ -170,8 +170,8 @@ section.widget {
 }
 
 .cwc-reset-button:hover {
-    background: #F99A30;
-    color: #fff;
+    color: #6bba66;
+    border-color: #6bba66;
 }
 
 .cwc-apply-button:hover {
