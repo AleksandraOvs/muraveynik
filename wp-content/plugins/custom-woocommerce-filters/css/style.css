@@ -397,7 +397,6 @@ Start Sidebar Area Wrapper
     justify-content: space-between;
     align-items: center;
     padding-top: 0;
-    border-top: 1px solid #f5f5f5;
 }
 
 .cwc-filter-params {
@@ -412,7 +411,9 @@ Start Sidebar Area Wrapper
 
 .cwc-filter-actions button {
     width: max-content;
-    padding: 7px 10px;
+    padding: 3px 10px;
+    border: none;
+    border-bottom: 1px solid #F99A30;
 }
 
 .sidebar-area-wrapper._filters {
