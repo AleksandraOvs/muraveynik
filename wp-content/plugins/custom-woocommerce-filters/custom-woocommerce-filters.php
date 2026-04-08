@@ -125,9 +125,10 @@ function cwc_render_attribute_filter($taxonomy, $title, $current_cat_id = 0)
             class="filter-item"
             data-taxonomy="<?php echo esc_attr($taxonomy); ?>"
             data-slug="<?php echo esc_attr($term->slug); ?>">
-            <div class="filter-name">
-                <?php echo esc_html(cwc_clean_title($title)); ?>
-            </div>
+            <!-- <div class="filter-name">
+                <?php //echo esc_html(cwc_clean_title($title)); 
+                ?>
+            </div> -->
 
             <div class="filter-value">
                 <?php echo esc_html($term->name); ?>
