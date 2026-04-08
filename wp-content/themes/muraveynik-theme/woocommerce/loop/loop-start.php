@@ -30,7 +30,19 @@ if (! defined('ABSPATH')) {
 		$term = get_queried_object();
 
 		if ($term && $term->parent != 0) {
-			dynamic_sidebar('filter-sidebar');
+
+			// Проверяем есть ли дочерние категории
+			$children = get_terms([
+				'taxonomy'   => 'product_cat',
+				'parent'     => $term->term_id,
+				'hide_empty' => false,
+				'fields'     => 'ids'
+			]);
+
+			// Если дочерних категорий НЕТ — показываем сайдбар
+			if (empty($children)) {
+				dynamic_sidebar('filter-sidebar');
+			}
 		}
 	}
 	?>
