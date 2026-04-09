@@ -385,7 +385,9 @@ input[name="quantity"] {
 }
 
 .products.columns-1 {
-  display: block;
+  display: flex;
+  gap: 1px;
+  flex-wrap: wrap;
 }
 
 .products.columns-1 .product:not(:last-child) {
