@@ -394,6 +394,14 @@ input[name="quantity"] {
   margin-bottom: 20px;
 } */
 
+.products.columns-1 .product {
+  width: 100%;
+}
+
+.products.columns-1 .product:not(:first-child) {
+  margin-top: 15px;
+}
+
 nav.woocommerce-pagination {
   width: 100%;
   margin-top: 30px;
