@@ -446,7 +446,7 @@ Start Sidebar Area Wrapper
     .cwc-filter-params {
         display: grid;
         grid-auto-flow: column;
-        grid-template-rows: repeat(2, auto);
+        /* grid-template-rows: repeat(2, auto); */
         gap: 10px;
         padding-bottom: 7px;
         overflow-x: auto;
