@@ -53,3 +53,52 @@ document.addEventListener('input', e => {
         });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+
+    const container = document.querySelector('.products');
+    if (!container) return;
+
+    let currentPage = parseInt(container.dataset.currentPage);
+    let maxPages = parseInt(container.dataset.maxPages);
+    let loading = false;
+
+    async function loadMore() {
+
+        if (loading) return;
+        if (currentPage >= maxPages) return;
+
+        loading = true;
+        currentPage++;
+
+        const formData = new URLSearchParams();
+        formData.append('action', 'load_more_products');
+        formData.append('page', currentPage);
+
+        const res = await fetch('/wp-admin/admin-ajax.php', {
+            method: 'POST',
+            body: formData
+        });
+
+        const html = await res.text();
+
+        if (html.trim()) {
+            container.insertAdjacentHTML('beforeend', html);
+
+            // 🔥 событие для твоих скриптов
+            document.dispatchEvent(new Event('productsLoaded'));
+        }
+
+        loading = false;
+    }
+
+    window.addEventListener('scroll', () => {
+
+        const scroll = window.scrollY + window.innerHeight;
+        const trigger = document.body.offsetHeight - 300;
+
+        if (scroll >= trigger) {
+            loadMore();
+        }
+    });
+
+});
