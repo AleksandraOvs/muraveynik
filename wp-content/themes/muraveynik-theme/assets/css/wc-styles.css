@@ -390,9 +390,9 @@ input[name="quantity"] {
   flex-wrap: wrap;
 }
 
-.products.columns-1 .product:not(:last-child) {
+/* .products.columns-1 .product:not(:last-child) {
   margin-bottom: 20px;
-}
+} */
 
 nav.woocommerce-pagination {
   width: 100%;
