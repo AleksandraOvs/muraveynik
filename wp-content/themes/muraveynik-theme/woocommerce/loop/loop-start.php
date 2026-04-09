@@ -47,4 +47,8 @@ if (! defined('ABSPATH')) {
 	}
 	?>
 
-	<ul class="products columns-<?php echo esc_attr(wc_get_loop_prop('columns')); ?>">
+
+
+	<ul class="products columns-<?php echo esc_attr(wc_get_loop_prop('columns')); ?>"
+		data-current-page="1"
+		data-max-pages="<?php echo wc_get_loop_prop('total_pages'); ?>">
