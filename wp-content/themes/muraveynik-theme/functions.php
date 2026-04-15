@@ -412,19 +412,19 @@ function ajax_search_handler()
 	wp_send_json_success(ob_get_clean());
 }
 
-// add_action('wp_enqueue_scripts', function () {
-// 	wp_enqueue_script(
-// 		'ajax-search',
-// 		get_template_directory_uri() . '/assets/js/ajax.js',
-// 		[],
-// 		null,
-// 		true
-// 	);
+add_action('wp_enqueue_scripts', function () {
+	wp_enqueue_script(
+		'ajax-search',
+		get_template_directory_uri() . '/assets/js/ajax.js',
+		[],
+		null,
+		true
+	);
 
-// 	wp_localize_script('ajax-search', 'ajaxSearch', [
-// 		'url' => admin_url('admin-ajax.php'),
-// 	]);
-// });
+	wp_localize_script('ajax-search', 'ajaxSearch', [
+		'url' => admin_url('admin-ajax.php'),
+	]);
+});
 
 
 //ajax-загрузка товаров

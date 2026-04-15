@@ -566,3 +566,34 @@ function my_woocommerce_get_availability($availability)
 
 // 	wp_die();
 // }
+
+
+add_action('wp_ajax_load_more_products', 'load_more_products');
+add_action('wp_ajax_nopriv_load_more_products', 'load_more_products');
+
+function load_more_products()
+{
+
+	$paged = $_POST['page'] ?? 1;
+
+	$args = [
+		'post_type' => 'product',
+		'posts_per_page' => 5,
+		'paged' => $paged,
+	];
+
+	// 🔥 если есть фильтры — добавь сюда свою логику tax_query/meta_query
+	// (можешь переиспользовать код из фильтра)
+
+	$query = new WP_Query($args);
+
+	if ($query->have_posts()) {
+		while ($query->have_posts()) {
+			$query->the_post();
+
+			wc_get_template_part('content', 'product');
+		}
+	}
+
+	wp_die(); // ❗ обязательно
+}
