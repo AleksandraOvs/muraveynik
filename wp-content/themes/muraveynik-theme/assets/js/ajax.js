@@ -58,9 +58,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.products');
     if (!container) return;
 
-    let currentPage = parseInt(container.dataset.currentPage);
-    let maxPages = parseInt(container.dataset.maxPages);
+    let currentPage = 1;
+    let maxPages = parseInt(container.dataset.maxPages || 1);
     let loading = false;
+
+    // 👇 ВОТ СЮДА — СИНХРОНИЗАЦИЯ
+    function syncPagination() {
+        currentPage = 1;
+        maxPages = parseInt(container.dataset.maxPages || 1);
+    }
 
     async function loadMore() {
 
@@ -96,8 +102,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         loading = false;
     }
-
     window.addEventListener('scroll', () => {
+
+        if (loading) return;
+        if (currentPage >= maxPages) return;
 
         const scroll = window.scrollY + window.innerHeight;
         const trigger = document.body.offsetHeight - 300;
