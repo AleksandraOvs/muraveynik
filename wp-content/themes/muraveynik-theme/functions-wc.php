@@ -577,32 +577,43 @@ function load_more_products()
 	$paged = $_POST['page'] ?? 1;
 	$cat_id = $_POST['current_cat_id'] ?? 0;
 
-	$args = [
-		'post_type' => 'product',
-		'posts_per_page' => 5,
-		'paged' => $paged,
-	];
+	$tax_query = [];
 
+	// ✅ 1. категория
 	if ($cat_id) {
-		$args['tax_query'] = [
-			[
-				'taxonomy' => 'product_cat',
-				'field'    => 'term_id',
-				'terms'    => $cat_id,
-				'include_children' => false
-			]
+		$tax_query[] = [
+			'taxonomy' => 'product_cat',
+			'field'    => 'term_id',
+			'terms'    => (int)$cat_id,
+			'include_children' => true,
 		];
 	}
+
+	// ✅ 2. фильтры (ВАЖНО — добавляем, а не перезаписываем)
+	foreach ($_POST as $key => $value) {
+
+		if (strpos($key, 'filter_') === 0) {
+
+			$taxonomy = str_replace('filter_', '', $key);
+
+			$tax_query[] = [
+				'taxonomy' => $taxonomy,
+				'field'    => 'slug',
+				'terms'    => sanitize_text_field($value),
+			];
+		}
+	}
+
+	// ✅ 3. собираем args
 	$args = [
-		'post_type' => 'product',
+		'post_type'      => 'product',
 		'posts_per_page' => 5,
-		'paged' => $paged,
+		'paged'          => $paged,
 	];
 
-	// 🔥 если есть фильтры — добавь сюда свою логику tax_query/meta_query
-	// (можешь переиспользовать код из фильтра)
-
-
+	if (!empty($tax_query)) {
+		$args['tax_query'] = $tax_query;
+	}
 
 	$query = new WP_Query($args);
 
@@ -614,5 +625,5 @@ function load_more_products()
 		}
 	}
 
-	wp_die(); // ❗ обязательно
+	wp_die();
 }
