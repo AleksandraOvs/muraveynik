@@ -215,7 +215,7 @@ function cwc_filter_products_callback()
         ];
     }
 
-    // Обработка всех фильтров
+    // Обработка фильтров
     foreach ($_POST as $key => $value) {
         if (strpos($key, 'filter_') !== 0) continue;
         if ($key === 'filter_current_cat_id') continue;
@@ -223,7 +223,6 @@ function cwc_filter_products_callback()
         $taxonomy = str_replace('filter_', '', $key);
         if (!taxonomy_exists($taxonomy)) continue;
 
-        // берём только последнее выбранное значение
         $term = sanitize_text_field(is_array($value) ? end($value) : $value);
         $term = urldecode($term);
 
@@ -237,7 +236,7 @@ function cwc_filter_products_callback()
         $debug['filters'][$taxonomy] = $term;
     }
 
-    // Фильтр по цене
+    // Цена
     if (isset($_POST['min_price'], $_POST['max_price'])) {
         $min_price = floatval($_POST['min_price']);
         $max_price = floatval($_POST['max_price']);
@@ -276,9 +275,13 @@ function cwc_filter_products_callback()
         ];
     }
 
+    // 🔥 текущая страница (на будущее для infinite scroll)
+    $paged = isset($_POST['paged']) ? max(1, intval($_POST['paged'])) : 1;
+
     $query_args = [
         'post_type'      => 'product',
-        'posts_per_page' => -1,
+        'posts_per_page' => 12, // важно: НЕ -1
+        'paged'          => $paged,
         'tax_query'      => $tax_query ?: [],
         'meta_query'     => count($meta_query) > 1 ? $meta_query : [],
     ];
@@ -288,6 +291,7 @@ function cwc_filter_products_callback()
     $query = new WP_Query($query_args);
 
     ob_start();
+
     if ($query->have_posts()) {
         while ($query->have_posts()) {
             $query->the_post();
@@ -296,11 +300,16 @@ function cwc_filter_products_callback()
     } else {
         echo '<p class="no-products">Товары не найдены</p>';
     }
+
+    $html = ob_get_clean();
+
     wp_reset_postdata();
 
     wp_send_json_success([
-        'html'  => ob_get_clean(),
-        'debug' => $debug
+        'html'       => $html,
+        'max_pages'  => $query->max_num_pages, // 🔥 КЛЮЧЕВОЕ ДЛЯ FIX SCROLL
+        'paged'      => $paged,
+        'debug'      => $debug
     ]);
 }
 
