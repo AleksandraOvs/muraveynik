@@ -5,6 +5,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!filtersWrapper || !productsWrapper) return;
 
+    // 🔥 global state
+    window.cwcFilters = {};
+    window.cwcIsFiltering = false;
+
+    let currentPage = 1;
+    let maxPages = parseInt(productsWrapper.dataset.maxPages || 1);
+
+    // =========================
+    // sync pagination state
+    // =========================
+    function syncPagination() {
+        currentPage = 1;
+        maxPages = parseInt(productsWrapper.dataset.maxPages || 1);
+    }
+
+    // =========================
+    // get filters
+    // =========================
     function getFiltersData() {
         const data = {
             action: 'cwc_filter_products',
@@ -14,30 +32,30 @@ document.addEventListener('DOMContentLoaded', () => {
         const activeFilters = {};
 
         filtersWrapper.querySelectorAll('.filter-item.active').forEach(el => {
-            const taxonomy = el.dataset.taxonomy; // ✅ теперь отсюда
+            const taxonomy = el.dataset.taxonomy;
             const slug = decodeURIComponent(el.dataset.slug);
 
             if (taxonomy && slug) {
-                activeFilters[taxonomy] = slug; // одно значение на атрибут
+                activeFilters[taxonomy] = slug;
             }
         });
 
-        // собираем данные
         for (const [taxonomy, slug] of Object.entries(activeFilters)) {
             data['filter_' + taxonomy] = slug;
         }
 
-        // в наличии
         if (filtersWrapper.querySelector('.instock-filter.active')) {
             data.instock = 1;
         }
 
-        console.log('Filters data for AJAX:', data);
-
         return data;
     }
 
+    // =========================
+    // apply filters
+    // =========================
     function applyFilters() {
+
         const data = getFiltersData();
 
         productsWrapper.classList.add('loading');
@@ -49,34 +67,52 @@ document.addEventListener('DOMContentLoaded', () => {
         })
             .then(res => res.json())
             .then(res => {
-                console.log('Server debug info:', res);
 
-                if (res.success) {
-                    productsWrapper.innerHTML = res.data.html;
-                } else {
+                if (!res.success) {
                     console.warn('Ошибка фильтрации', res);
+                    return;
                 }
+
+                // 🔥 обновляем HTML
+                productsWrapper.innerHTML = res.data.html;
+
+                // 🔥 обновляем dataset
+                productsWrapper.dataset.currentPage = 1;
+                productsWrapper.dataset.maxPages = res.data.max_pages;
+
+                // 🔥 синхронизация пагинации
+                syncPagination();
+
+                // 🔥 сохраняем фильтры
+                window.cwcFilters = data;
+                window.cwcIsFiltering = true;
+
+                // 🔥 сброс скролла
+                window.scrollTo(0, 0);
             })
             .finally(() => {
                 productsWrapper.classList.remove('loading');
             });
     }
 
-    // клик по фильтру
+    // =========================
+    // filter click
+    // =========================
+
     filtersWrapper.addEventListener('click', (e) => {
+
         const filterItem = e.target.closest('.filter-item');
         if (!filterItem) return;
 
         e.preventDefault();
 
-        const taxonomy = filterItem.dataset.taxonomy; // ✅ теперь напрямую
+        const taxonomy = filterItem.dataset.taxonomy;
 
-        // если уже активен — снимаем
         if (filterItem.classList.contains('active')) {
             filterItem.classList.remove('active');
         } else {
-            // ❗ убираем другие элементы этого же атрибута
-            filtersWrapper.querySelectorAll(`.filter-item.active[data-taxonomy="${taxonomy}"]`)
+            filtersWrapper
+                .querySelectorAll(`.filter-item.active[data-taxonomy="${taxonomy}"]`)
                 .forEach(el => el.classList.remove('active'));
 
             filterItem.classList.add('active');
@@ -85,7 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
         applyFilters();
     });
 
+    // =========================
     // apply / reset
+    // =========================
     filtersWrapper.addEventListener('click', (e) => {
 
         if (e.target.matches('#cwc-apply-filters')) {
@@ -93,12 +131,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (e.target.matches('#cwc-reset-filters')) {
+
             filtersWrapper.querySelectorAll('.filter-item.active')
                 .forEach(el => el.classList.remove('active'));
 
+            window.cwcFilters = {};
+            window.cwcIsFiltering = false;
+
+            productsWrapper.dataset.currentPage = 1;
+            productsWrapper.dataset.maxPages = 1;
+
+            syncPagination();
+
             applyFilters();
         }
-
     });
 
 });
