@@ -34,7 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
         data.append('action', 'load_more_products');
         data.append('page', currentPage);
 
-        // 🔥 если включены фильтры
+        // ✅ категория (ПРАВИЛЬНОЕ МЕСТО)
+        if (container.dataset.categoryId) {
+            data.append('current_cat_id', container.dataset.categoryId);
+        }
+
+        // ✅ фильтры
         if (window.cwcIsFiltering && window.cwcFilters) {
             Object.entries(window.cwcFilters).forEach(([key, val]) => {
                 data.append(key, val);

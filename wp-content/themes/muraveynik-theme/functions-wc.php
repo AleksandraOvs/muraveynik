@@ -575,7 +575,24 @@ function load_more_products()
 {
 
 	$paged = $_POST['page'] ?? 1;
+	$cat_id = $_POST['current_cat_id'] ?? 0;
 
+	$args = [
+		'post_type' => 'product',
+		'posts_per_page' => 5,
+		'paged' => $paged,
+	];
+
+	if ($cat_id) {
+		$args['tax_query'] = [
+			[
+				'taxonomy' => 'product_cat',
+				'field'    => 'term_id',
+				'terms'    => $cat_id,
+				'include_children' => false
+			]
+		];
+	}
 	$args = [
 		'post_type' => 'product',
 		'posts_per_page' => 5,
@@ -584,6 +601,8 @@ function load_more_products()
 
 	// 🔥 если есть фильтры — добавь сюда свою логику tax_query/meta_query
 	// (можешь переиспользовать код из фильтра)
+
+
 
 	$query = new WP_Query($args);
 
