@@ -73,28 +73,30 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
 
-                // 🔥 обновляем HTML
+                // 🔥 HTML
                 productsWrapper.innerHTML = res.data.html;
 
-                // 🔥 обновляем dataset
+                // 🔥 dataset sync
                 productsWrapper.dataset.currentPage = 1;
                 productsWrapper.dataset.maxPages = res.data.max_pages;
 
-                // 🔥 синхронизация пагинации
-                syncPagination();
-
-                // 🔥 сохраняем фильтры
+                // 🔥 state sync
                 window.cwcFilters = data;
                 window.cwcIsFiltering = true;
 
-                // 🔥 сброс скролла
+                // 🔥 pagination sync
+                syncPagination();
+
+                // 🔥 CRITICAL: reset scroll loading state (если есть global loading)
+                window.dispatchEvent(new Event('cwc_reset_scroll'));
+
+                // 🔥 scroll reset
                 window.scrollTo(0, 0);
             })
             .finally(() => {
                 productsWrapper.classList.remove('loading');
             });
     }
-
     // =========================
     // filter click
     // =========================
