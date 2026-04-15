@@ -87,6 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 // 🔥 pagination sync
                 syncPagination();
 
+                document.dispatchEvent(new Event('cwc_filters_applied'));
+
                 // 🔥 CRITICAL: reset scroll loading state (если есть global loading)
                 window.dispatchEvent(new Event('cwc_reset_scroll'));
 
