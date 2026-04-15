@@ -71,8 +71,16 @@ document.addEventListener('DOMContentLoaded', () => {
         currentPage++;
 
         const formData = new URLSearchParams();
+
         formData.append('action', 'load_more_products');
         formData.append('page', currentPage);
+
+        // 🔥 ВАЖНО: передаём фильтры если они активны
+        if (window.cwcIsFiltering && window.cwcFilters) {
+            Object.entries(window.cwcFilters).forEach(([key, value]) => {
+                formData.append(key, value);
+            });
+        }
 
         const res = await fetch('/wp-admin/admin-ajax.php', {
             method: 'POST',
@@ -83,8 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (html.trim()) {
             container.insertAdjacentHTML('beforeend', html);
-
-            // 🔥 событие для твоих скриптов
             document.dispatchEvent(new Event('productsLoaded'));
         }
 
@@ -96,9 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const scroll = window.scrollY + window.innerHeight;
         const trigger = document.body.offsetHeight - 300;
 
-        if (scroll >= trigger) {
-            loadMore();
-        }
+        if (scroll < trigger) return;
+
+        loadMore();
     });
 
 });
