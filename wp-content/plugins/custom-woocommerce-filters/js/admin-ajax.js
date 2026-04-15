@@ -5,25 +5,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!filtersWrapper || !productsWrapper) return;
 
-    // 🔥 global state
+    // =========================
+    // GLOBAL STATE
+    // =========================
     window.cwcFilters = {};
     window.cwcIsFiltering = false;
 
     let currentPage = 1;
     let maxPages = parseInt(productsWrapper.dataset.maxPages || 1);
+    let loading = false;
 
     // =========================
-    // sync pagination state
+    // SYNC PAGINATION
     // =========================
     function syncPagination() {
         currentPage = 1;
         maxPages = parseInt(productsWrapper.dataset.maxPages || 1);
+        loading = false;
     }
 
     // =========================
-    // get filters
+    // GET FILTERS
     // =========================
     function getFiltersData() {
+
         const data = {
             action: 'cwc_filter_products',
             current_cat_id: filtersWrapper.dataset.currentCat || 0
@@ -32,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const activeFilters = {};
 
         filtersWrapper.querySelectorAll('.filter-item.active').forEach(el => {
+
             const taxonomy = el.dataset.taxonomy;
             const slug = decodeURIComponent(el.dataset.slug);
 
@@ -52,13 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =========================
-    // apply filters
+    // APPLY FILTERS
     // =========================
     function applyFilters() {
 
         const data = getFiltersData();
 
         productsWrapper.classList.add('loading');
+        loading = true;
 
         fetch(cwc_ajax_object.ajax_url, {
             method: 'POST',
@@ -73,36 +80,44 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
 
-                // 🔥 HTML
+                // =========================
+                // UPDATE PRODUCTS
+                // =========================
                 productsWrapper.innerHTML = res.data.html;
 
-                // 🔥 dataset sync
+                // =========================
+                // RESET PAGINATION STATE
+                // =========================
                 productsWrapper.dataset.currentPage = 1;
-                productsWrapper.dataset.maxPages = res.data.max_pages;
+                productsWrapper.dataset.maxPages = res.data.max_pages || 1;
 
-                // 🔥 state sync
+                syncPagination();
+
+                // =========================
+                // SAVE FILTER STATE
+                // =========================
                 window.cwcFilters = data;
                 window.cwcIsFiltering = true;
 
-                // 🔥 pagination sync
-                syncPagination();
-
+                // =========================
+                // EVENTS
+                // =========================
                 document.dispatchEvent(new Event('cwc_filters_applied'));
 
-                // 🔥 CRITICAL: reset scroll loading state (если есть global loading)
-                window.dispatchEvent(new Event('cwc_reset_scroll'));
-
-                // 🔥 scroll reset
+                // =========================
+                // RESET SCROLL POSITION
+                // =========================
                 window.scrollTo(0, 0);
             })
             .finally(() => {
                 productsWrapper.classList.remove('loading');
+                loading = false;
             });
     }
-    // =========================
-    // filter click
-    // =========================
 
+    // =========================
+    // FILTER CLICK
+    // =========================
     filtersWrapper.addEventListener('click', (e) => {
 
         const filterItem = e.target.closest('.filter-item');
@@ -126,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // =========================
-    // apply / reset
+    // APPLY / RESET BUTTONS
     // =========================
     filtersWrapper.addEventListener('click', (e) => {
 

@@ -412,42 +412,42 @@ function ajax_search_handler()
 	wp_send_json_success(ob_get_clean());
 }
 
-add_action('wp_enqueue_scripts', function () {
-	wp_enqueue_script(
-		'ajax-search',
-		get_template_directory_uri() . '/assets/js/ajax.js',
-		[],
-		null,
-		true
-	);
+// add_action('wp_enqueue_scripts', function () {
+// 	wp_enqueue_script(
+// 		'ajax-search',
+// 		get_template_directory_uri() . '/assets/js/ajax.js',
+// 		[],
+// 		null,
+// 		true
+// 	);
 
-	wp_localize_script('ajax-search', 'ajaxSearch', [
-		'url' => admin_url('admin-ajax.php'),
-	]);
-});
+// 	wp_localize_script('ajax-search', 'ajaxSearch', [
+// 		'url' => admin_url('admin-ajax.php'),
+// 	]);
+// });
 
 
 //ajax-загрузка товаров
 
-add_action('wp_ajax_loadmore', 'true_loadmore');
-add_action('wp_ajax_nopriv_loadmore', 'true_loadmore');
+// add_action('wp_ajax_loadmore', 'true_loadmore');
+// add_action('wp_ajax_nopriv_loadmore', 'true_loadmore');
 
-function true_loadmore()
-{
+// function true_loadmore()
+// {
 
-	$paged = !empty($_POST['paged']) ? $_POST['paged'] : 1;
-	$paged++;
+// 	$paged = !empty($_POST['paged']) ? $_POST['paged'] : 1;
+// 	$paged++;
 
-	query_posts(array(
-		'paged' => $paged
-	));
+// 	query_posts(array(
+// 		'paged' => $paged
+// 	));
 
-	while (have_posts()) : the_post();
-		echo wc_get_template_part('content', 'product');
-	endwhile;
+// 	while (have_posts()) : the_post();
+// 		echo wc_get_template_part('content', 'product');
+// 	endwhile;
 
-	die;
-}
+// 	die;
+// }
 
 
 

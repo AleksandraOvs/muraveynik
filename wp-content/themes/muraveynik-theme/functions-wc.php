@@ -522,47 +522,47 @@ function my_woocommerce_get_availability($availability)
 	return $availability;
 }
 
-add_action('wp_ajax_load_more_products', 'load_more_products');
-add_action('wp_ajax_nopriv_load_more_products', 'load_more_products');
+// add_action('wp_ajax_load_more_products', 'load_more_products');
+// add_action('wp_ajax_nopriv_load_more_products', 'load_more_products');
 
-function load_more_products()
-{
+// function load_more_products()
+// {
 
-	$paged = isset($_POST['page']) ? intval($_POST['page']) : 1;
+// 	$paged = isset($_POST['page']) ? intval($_POST['page']) : 1;
 
-	$args = [
-		'post_type' => 'product',
-		'post_status' => 'publish',
-		'paged' => $paged,
-	];
+// 	$args = [
+// 		'post_type' => 'product',
+// 		'post_status' => 'publish',
+// 		'paged' => $paged,
+// 	];
 
-	// 👉 если категория
-	if (isset($_SERVER['HTTP_REFERER'])) {
-		$url = $_SERVER['HTTP_REFERER'];
-		$path = parse_url($url, PHP_URL_PATH);
+// 	// 👉 если категория
+// 	if (isset($_SERVER['HTTP_REFERER'])) {
+// 		$url = $_SERVER['HTTP_REFERER'];
+// 		$path = parse_url($url, PHP_URL_PATH);
 
-		// получаем категорию из URL
-		$term = get_term_by('slug', basename($path), 'product_cat');
+// 		// получаем категорию из URL
+// 		$term = get_term_by('slug', basename($path), 'product_cat');
 
-		if ($term) {
-			$args['tax_query'] = [
-				[
-					'taxonomy' => 'product_cat',
-					'field' => 'slug',
-					'terms' => $term->slug,
-				]
-			];
-		}
-	}
+// 		if ($term) {
+// 			$args['tax_query'] = [
+// 				[
+// 					'taxonomy' => 'product_cat',
+// 					'field' => 'slug',
+// 					'terms' => $term->slug,
+// 				]
+// 			];
+// 		}
+// 	}
 
-	$query = new WP_Query($args);
+// 	$query = new WP_Query($args);
 
-	if ($query->have_posts()) {
-		while ($query->have_posts()) {
-			$query->the_post();
-			wc_get_template_part('content', 'product');
-		}
-	}
+// 	if ($query->have_posts()) {
+// 		while ($query->have_posts()) {
+// 			$query->the_post();
+// 			wc_get_template_part('content', 'product');
+// 		}
+// 	}
 
-	wp_die();
-}
+// 	wp_die();
+// }
