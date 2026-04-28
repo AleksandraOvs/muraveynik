@@ -326,11 +326,11 @@ margin-right: 25px; */
   }
 }
 
-@media (max-width: 1400px) {
+/* @media (max-width: 1400px) {
   .container {
     width: 1360px;
   }
-}
+} */
 
 @media (max-width: 1200px) {
   .container {
